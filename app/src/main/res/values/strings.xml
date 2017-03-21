@@ -6,4 +6,10 @@
     <string name="workout_notification_title">Your workout is active</string>
     <string name="workout_notification_body">Tap to return to workout</string>
 
+    <!-- Strings for AddWorkoutDialog -->
+    <string name="workout_title">Workout name</string>
+    <string name="workout_time_title">Workout time</string>
+    <string name="rest_time_title">Rest time</string>
+    <string name="rounds_title">Rounds:</string>
+
 </resources>

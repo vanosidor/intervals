@@ -5,40 +5,56 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="27281830603925"
+    timestamp="31774677468716"
     token="-2348946821081788238"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="327" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="36" />
     <task
         name="verifier"
-        duration="0" />
+        duration="4" />
 
     <artifact
         location="D:\Android\Projects\Tabata\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
         type="RESOURCES" />
+    <artifact
+        location="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="26802030635182"
-        verifier="BINARY_MANIFEST_FILE_CHANGE" >
+        timestamp="25754708975942"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\Android\Projects\Tabata\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="27281830603925"
-        verifier="COMPATIBLE" >
+        timestamp="30420400716066"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="31774677468716"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\Android\Projects\Tabata\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
+        <artifact
+            location="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

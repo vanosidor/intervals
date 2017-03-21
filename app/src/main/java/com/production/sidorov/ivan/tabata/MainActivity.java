@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -16,6 +18,7 @@ import android.view.View;
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
+import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
 import com.production.sidorov.ivan.tabata.utilitis.FakeDataUtils;
 
 public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler, LoaderManager.LoaderCallbacks<Cursor>{
@@ -53,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
 
         getSupportLoaderManager().initLoader(ID_WORKOUT_LOADER, null, this);
-
 
         //FakeDataUtils.insertFakeData(this);
 
@@ -94,6 +96,22 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     //onClick Floating Action Button
     public void addWorkout(View view) {
+        AddWorkoutDialog addWorkoutDialog = new AddWorkoutDialog();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.add(R.id.fragmentContainerFrameLayout, addWorkoutDialog);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+        mFloatingActionButtonAdd.hide();
+        mRecyclerView.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        mRecyclerView.setVisibility(View.VISIBLE);
     }
 }
