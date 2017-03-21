@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_0d33220bb608f9269c1d4251e3d391175ced34ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_21717323b9f5c403b1c2a5ed368a5d8f4080bbfc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0b0d56f8fd7e2f902ff7c0b3df45b0fa76383795">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bb426f233933a9e172a94706b34f6211f93db754\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.2.0_fd5b892574eeb58de45a71be823b1603e75528e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_e17ade64f73287dedd63757f6909ff887669da37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_5be1a55d6181347f30e2eb976e6a4e6614e602da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_084069d02dd5a8264cfa757afd4260cd3f7be0b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.2.0_d24e2b10378ba01150f6a4495a9ef7548fa54935\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.2.0_ca1d2a1d43a2c4d94e96433aa89116908be6fcec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_0e16ba378ea71f68bb2f45493ee44fc828323a3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_f83231e4f9fe7ae5e8353f01d0a17703217900ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.2.0_57ea1c0c98c11d2bd71d4e5cc1b6cdad3f607a39\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_3fdb128a54ab158a5eb8852d273648c02628189c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\Projects\Tabata\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3716e891dec537916bd907d33ff757b686cefac4">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_57d28123c1cf39aabe8b1103cb7855d9992b5bf6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_30f64a62097eb8c494ea5c502ef2f487c2fe4581\classes.dex" />
+    </item>
+
+</items>

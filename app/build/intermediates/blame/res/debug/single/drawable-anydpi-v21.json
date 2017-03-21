@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\stop.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\stop.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.2.0\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.2.0\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\timer.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\timer.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\close.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\close.xml"
+    }
+]

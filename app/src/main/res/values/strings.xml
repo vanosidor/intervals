@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tabata</string>
+    <string name="content_authority">com.production.sidorov.ivan.tabata</string>
+
+    <!-- Strings for Notifications-->
+    <string name="workout_notification_title">Your workout is active</string>
+    <string name="workout_notification_body">Tap to return to workout</string>
+
+</resources>
