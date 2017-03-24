@@ -1,6 +1,7 @@
 package com.production.sidorov.ivan.tabata.data;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
@@ -124,7 +125,26 @@ public class WorkoutProvider extends ContentProvider {
     @Nullable
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-        return null;
+
+        Uri returnUri;
+
+        final SQLiteDatabase db = mDBHelper.getWritableDatabase();
+        switch (sUriMatcher.match(uri)) {
+            case CODE_WORKOUT:{
+                long id = db.insert(WorkoutContract.WorkoutEntry.TABLE_NAME,null,contentValues);
+                if (id>0){
+                    returnUri = ContentUris.withAppendedId(WorkoutContract.WorkoutEntry.CONTENT_URI,id);
+                }
+                else throw new android.database.SQLException("Failed to insert row into " + uri);
+
+                break;
+            }
+            default:throw new UnsupportedOperationException("Unknown uri: " + uri);
+        }
+
+        getContext().getContentResolver().notifyChange(uri,null);
+
+        return returnUri;
     }
 
     @Override

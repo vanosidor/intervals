@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- BetterPickerFragment style -->
+    <style name="MyCustomBetterPickerTheme">
+        <item name="bpDialogBackground">@drawable/time_picker_purple</item>
+        <item name="bpTextColor">@android:color/white</item>
+        <item name="bpDeleteIcon">@drawable/ic_backspace_dark</item>
+        <item name="bpCheckIcon">@drawable/ic_check_dark</item>
+        <item name="bpKeyBackground">@drawable/key_background_dark</item>
+        <item name="bpButtonBackground">@drawable/button_background_dark</item>
+        <item name="bpTitleDividerColor">@color/default_keyboard_indicator_color_dark</item>
+        <item name="bpDividerColor">@color/default_divider_color_dark</item>
+        <item name="bpKeyboardIndicatorColor">@color/default_keyboard_indicator_color_dark</item>
+    </style>
+
 </resources>

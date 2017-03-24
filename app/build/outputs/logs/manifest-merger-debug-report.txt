@@ -15,17 +15,17 @@ ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml
 application
 ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:5:5-35:19
-MERGED from [com.android.support:design:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.0] C:\Users\Иван\.android\build-cache\859859a1426d8054fa80385147bbd2aa7edcc83b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Иван\.android\build-cache\fd256257bf91c22d9ece9ca006b0f97f334bd92e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\Иван\.android\build-cache\3337f48d12c0f2857ace72290be9402ad0e1d177\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\Иван\.android\build-cache\df5abaee3b13791dd2580bc9aa0194328b1b405a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\Иван\.android\build-cache\2386c02f0fa4ae557e0c84c5ca0b909ae87d54d5\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\Иван\.android\build-cache\c49165ee988a64fde5b4a35edee564f178d6f38b\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Иван\.android\build-cache\f5477e39ca21ee7b474440c36791482e4f5cb0e4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\5263e32579ac01a28ea208e55fe1d42e481011ef\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\bf93b2e32f11871df5ef9d585a21b507cd20aab6\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Иван\.android\build-cache\91f312dc368cf51c2fa5c4155b3d57a3192d0040\output\AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
@@ -80,23 +80,41 @@ ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:33:9-78
 		ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:33:18-51
 uses-sdk
 INJECTED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.0] C:\Users\Иван\.android\build-cache\b8af5363a28f880588640e18fbc905ae744f27a3\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.0] C:\Users\Иван\.android\build-cache\859859a1426d8054fa80385147bbd2aa7edcc83b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.code-troopers.betterpickers:library:3.1.0] C:\Users\Иван\.android\build-cache\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Иван\.android\build-cache\fd256257bf91c22d9ece9ca006b0f97f334bd92e\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\Иван\.android\build-cache\3337f48d12c0f2857ace72290be9402ad0e1d177\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\Иван\.android\build-cache\df5abaee3b13791dd2580bc9aa0194328b1b405a\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\Иван\.android\build-cache\2386c02f0fa4ae557e0c84c5ca0b909ae87d54d5\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\Иван\.android\build-cache\c49165ee988a64fde5b4a35edee564f178d6f38b\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Иван\.android\build-cache\f5477e39ca21ee7b474440c36791482e4f5cb0e4\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\5263e32579ac01a28ea208e55fe1d42e481011ef\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\bf93b2e32f11871df5ef9d585a21b507cd20aab6\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Иван\.android\build-cache\91f312dc368cf51c2fa5c4155b3d57a3192d0040\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.2.0] D:\Android\Projects\Tabata\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.0] C:\Users\Иван\.android\build-cache\b8af5363a28f880588640e18fbc905ae744f27a3\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.0] C:\Users\Иван\.android\build-cache\859859a1426d8054fa80385147bbd2aa7edcc83b\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Иван\.android\build-cache\fd256257bf91c22d9ece9ca006b0f97f334bd92e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\Иван\.android\build-cache\3337f48d12c0f2857ace72290be9402ad0e1d177\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\Иван\.android\build-cache\df5abaee3b13791dd2580bc9aa0194328b1b405a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\Иван\.android\build-cache\2386c02f0fa4ae557e0c84c5ca0b909ae87d54d5\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\Иван\.android\build-cache\c49165ee988a64fde5b4a35edee564f178d6f38b\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Иван\.android\build-cache\f5477e39ca21ee7b474440c36791482e4f5cb0e4\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\5263e32579ac01a28ea208e55fe1d42e481011ef\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\bf93b2e32f11871df5ef9d585a21b507cd20aab6\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Иван\.android\build-cache\91f312dc368cf51c2fa5c4155b3d57a3192d0040\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:26:9-47

@@ -21,7 +21,9 @@ import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
 import com.production.sidorov.ivan.tabata.utilitis.FakeDataUtils;
 
-public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler, LoaderManager.LoaderCallbacks<Cursor>{
+public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler,
+        LoaderManager.LoaderCallbacks<Cursor>,
+        AddWorkoutDialog.OnFragmentButtonsClickListener{
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String WORKOUT_DATA = "workout_data";
@@ -57,7 +59,11 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
         getSupportLoaderManager().initLoader(ID_WORKOUT_LOADER, null, this);
 
-        //FakeDataUtils.insertFakeData(this);
+        /* remove all workouts */
+        // getContentResolver().delete(WorkoutContract.WorkoutEntry.CONTENT_URI,null,null);
+
+        /*insert fake data*/
+        // FakeDataUtils.insertFakeData(this);
 
     }
 
@@ -106,12 +112,28 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         fragmentTransaction.commit();
 
         mFloatingActionButtonAdd.hide();
-        mRecyclerView.setVisibility(View.INVISIBLE);
+        mRecyclerView.setVisibility(View.GONE);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        mRecyclerView.setVisibility(View.VISIBLE);
+        mFloatingActionButtonAdd.show();
+        }
+
+
+    //Button cancel clicked in AddWorkoutFragment callback
+    @Override
+    public void onButtonCancelClicked() {
+       mFloatingActionButtonAdd.show();
+       mRecyclerView.setVisibility(View.VISIBLE);
+    }
+
+    //Button Ok clicked in AddWorkoutFragment callback
+    @Override
+    public void onButtonOkClicked() {
+        mFloatingActionButtonAdd.show();
         mRecyclerView.setVisibility(View.VISIBLE);
     }
 }

@@ -2,6 +2,9 @@
     <string name="app_name">Tabata</string>
     <string name="content_authority">com.production.sidorov.ivan.tabata</string>
 
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+
     <!-- Strings for Notifications-->
     <string name="workout_notification_title">Your workout is active</string>
     <string name="workout_notification_body">Tap to return to workout</string>
@@ -12,4 +15,8 @@
     <string name="rest_time_title">Rest time</string>
     <string name="rounds_title">Rounds:</string>
 
+    <!--Format time -->
+    <string name="format_time_with_hours"> %1$02d:%2$02d:%3$02d </string>
+    <string name="format_time"> %1$02d:%2$02d </string>
+    <string name="time_default">00:00</string>>
 </resources>
