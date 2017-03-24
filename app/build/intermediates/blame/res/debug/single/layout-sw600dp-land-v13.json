@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-land-v13\\hms_picker_dialog.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-sw600dp-land-v13\\hms_picker_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-land-v13\\number_picker_dialog.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-sw600dp-land-v13\\number_picker_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-land-v13\\date_picker_dialog.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-sw600dp-land-v13\\date_picker_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-land-v13\\time_picker_dialog.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-sw600dp-land-v13\\time_picker_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-land-v13\\calendar_date_picker_dialog.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-sw600dp-land-v13\\calendar_date_picker_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-land-v13\\expiration_picker_dialog.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-sw600dp-land-v13\\expiration_picker_dialog.xml"
+    }
+]

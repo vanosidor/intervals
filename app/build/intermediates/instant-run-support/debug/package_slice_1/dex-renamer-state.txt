@@ -1,0 +1,4 @@
+#Fri Mar 24 11:33:00 GMT+03:00 2017
+base.0=D\:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
+renamed.0=classes.dex
+file.0=D\:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1\\classes.dex
