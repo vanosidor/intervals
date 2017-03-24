@@ -19,6 +19,7 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
     }
 
     public static final String[] WORKOUT_PROJECTION = {
+            WorkoutContract.WorkoutEntry._ID,
             WorkoutContract.WorkoutEntry.COLUMN_NAME,
             WorkoutContract.WorkoutEntry.COLUMN_DATE,
             WorkoutContract.WorkoutEntry.COLUMN_WORKOUT_TIME,
@@ -26,11 +27,13 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
             WorkoutContract.WorkoutEntry.COLUMN_ROUNDS_NUM,
     };
 
-    public static final int INDEX_WORKOUT_NAME = 0;
-    public static final int INDEX_WORKOUT_DATE= 1;
-    public static final int INDEX_WORKOUT_TIME= 2;
-    public static final int INDEX_REST_TIME= 3;
-    public static final int INDEX_ROUNDS_NUM= 4;
+    public static final int INDEX_WORKOUT_ID = 0;
+    public static final int INDEX_WORKOUT_NAME = 1;
+    public static final int INDEX_WORKOUT_DATE= 2;
+    public static final int INDEX_WORKOUT_TIME= 3;
+    public static final int INDEX_REST_TIME= 4;
+    public static final int INDEX_ROUNDS_NUM= 5;
+
 
 
     @Override

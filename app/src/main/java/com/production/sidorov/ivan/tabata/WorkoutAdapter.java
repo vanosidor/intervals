@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 import java.util.concurrent.TimeUnit;
@@ -47,6 +48,10 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
     public void onBindViewHolder(WorkoutAdapterViewHolder holder, int position) {
         mCursor.moveToPosition(position);
 
+
+
+        int id = mCursor.getInt(WorkoutDBHelper.INDEX_WORKOUT_ID);
+
         String name = mCursor.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
 
         long dateInMillis = mCursor.getLong(WorkoutDBHelper.INDEX_WORKOUT_DATE);
@@ -55,6 +60,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         long restTime = mCursor.getLong(WorkoutDBHelper.INDEX_REST_TIME);
         int numRounds = mCursor.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
 
+        holder.itemView.setTag(id);
         holder.mWorkoutTextView.setText(name);
         holder.mWorkoutTime.setText(Long.toString(dateInMillis));
     }

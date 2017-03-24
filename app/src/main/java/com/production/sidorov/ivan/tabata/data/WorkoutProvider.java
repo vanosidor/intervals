@@ -160,10 +160,10 @@ public class WorkoutProvider extends ContentProvider {
                 break;
             }
             case CODE_WORKOUT_WITH_DATE: {
-                String normalizedUtcDateString = uri.getLastPathSegment();
-                String[] selectionArguments = new String[]{normalizedUtcDateString};
+                String idString = uri.getLastPathSegment();
+                String[] selectionArguments = new String[]{idString};
                 numRowsDeleted = db.delete(WorkoutContract.WorkoutEntry.TABLE_NAME
-                        ,WorkoutContract.WorkoutEntry.COLUMN_DATE + " = ? "
+                        ,WorkoutContract.WorkoutEntry._ID + " = ? "
                         ,selectionArguments);
                 break;
 
