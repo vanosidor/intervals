@@ -163,6 +163,7 @@
         
         <item>"Brasilia - Pará"</item>
     </string-array>
+    <attr format="reference" name="circularProgressBarStyle"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -498,6 +499,7 @@
         </attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout"><attr format="boolean" name="behavior_autoHide"/></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
+    <declare-styleable name="HoloCircularProgressBar"><attr format="dimension" name="stroke_width"/><attr format="float" name="progress"/><attr format="float" name="marker_progress"/><attr format="color" name="progress_color"/><attr format="color" name="marker_color"/><attr format="color" name="progress_background_color"/><attr format="boolean" name="thumb_visible"/><attr format="boolean" name="marker_visible"/><attr name="android:gravity"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
             <flag name="none" value="0"/>
             <flag name="beginning" value="1"/>
@@ -969,6 +971,7 @@
     <string name="recurrence_end_date_label">Until a date</string>
     <string name="recurrence_month_pattern_by_day">on the same day each month</string>
     <string name="rest_time_title">Rest time</string>
+    <string name="round_title">Round</string>
     <string name="rounds_title">Rounds:</string>
     <string name="sans_serif" translatable="false">sans-serif</string>
     <string name="save_label">Done</string>
@@ -2125,6 +2128,18 @@
         <item name="bpAmPmCircleColor">?attr/colorPrimary</item>
 
         <item name="bpDisabledDayTextColor">@color/date_picker_text_disabled</item>
+    </style>
+    <style name="CircularProgressBar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="stroke_width">4dp</item>
+        <item format="float" name="progress">0.1</item>
+        <item name="progress_color">@color/colorAccent</item>
+        <item name="progress_background_color">@android:color/white</item>
+        <item name="marker_color">#ffff4444</item>
+
+        <item name="marker_visible">false</item>
+        <item name="thumb_visible">false</item>
     </style>
     <style name="MyCustomBetterPickerTheme">
         <item name="bpDialogBackground">@drawable/time_picker_purple</item>

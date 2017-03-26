@@ -7,15 +7,26 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_workout_data"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:textSize="22sp"
         tools:text="Tabata"/>
-    <TextView android:id="@+id/tv_time"
+    <TextView android:id="@+id/workoutTimeTextView"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        tools:text = "12:08"
+        />
+    <TextView android:id="@+id/restTimeTextView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        tools:text = "12:08"
+        />
+    <TextView android:id="@+id/roundsTimeTextView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        tools:text = "12"
         />
     <View
         android:layout_width="match_parent"

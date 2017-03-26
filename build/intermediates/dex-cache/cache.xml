@@ -2,157 +2,139 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\8340568eb13797d65455da43857f16e9cec141fd\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c36ba5221d87b31dce8a6adac3a33ebce1e75650\classes.dex" />
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_3bc3e1a5d010a7041211ab76b7fdee0ac7d6b110.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\5263e32579ac01a28ea208e55fe1d42e481011ef\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_42fd949b10b27613f006170f1593f0f38a0b29f3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Android\Projects\Tabata\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_bb426f233933a9e172a94706b34f6211f93db754\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_1939f5ba3c98ed45e59dd8880f357185b938b989\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\f5477e39ca21ee7b474440c36791482e4f5cb0e4\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="518768f3200963fbfec652f498da2c9d39245234">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d523834bd5773cfafc6d00bf51ca0ccc7529b8f2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\2386c02f0fa4ae557e0c84c5ca0b909ae87d54d5\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a1b66c3130323bf583afba719a87550a449d263e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\fd256257bf91c22d9ece9ca006b0f97f334bd92e\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2ff94073488fc994524a3fb0314f8ff2766bba4c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="55d764fefc3262b18baf0f933fa67c107e40ceab">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_081ff25b7a144bf944f066d0dd1a1331240fbcdf\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\91f312dc368cf51c2fa5c4155b3d57a3192d0040\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\088cbce183c4657a9b3c06bc6ce95f0792acd12e\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5024722807e49dd56c362635b8ff383825b3c296\classes.dex" />
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_9df0a01f300d66f348163eead4263f25c4420667.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_ef7a4babd9498ea1e4153f4febcf528c4e74194a\classes.dex" />
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.0_1939f5ba3c98ed45e59dd8880f357185b938b989.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\859859a1426d8054fa80385147bbd2aa7edcc83b\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\c5680eac804b7a966ad182262a223913b2103e43\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_52c208d66fd1a96f283b4b2d072a6a628ffa3d54\classes.dex" />
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_a208c6ea8d4ca9df6fb0614177f03a7a2cdcc26f.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\b8af5363a28f880588640e18fbc905ae744f27a3\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\f728a25f959632cd3a4b7504dc2bb802d7bfd059\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2e5d6af84094aca4c9ae722341ee38ce48b5c3d5\classes.dex" />
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_4c8dfa541a09e02f7af659fdd0111d674e0292cb.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\c49165ee988a64fde5b4a35edee564f178d6f38b\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4bbf16adb0225bab85caae91d7aad7a3d52d6f28\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\df5abaee3b13791dd2580bc9aa0194328b1b405a\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\c4231d84600b52c6d88b5d96678c7b5072ddf065\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c0b0c747173e5ff9dff665ea9e6d4d4401825263\classes.dex" />
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_9bb49b34eba1c5673df73106b0ef0b1911c4591e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\3337f48d12c0f2857ace72290be9402ad0e1d177\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\b70712b180ca89fd9d0573d1a5244cdfedafa5a8\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5fd741f768e70ec23c99c13d6f3df902944532c0\classes.dex" />
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_e212873c47a300c6d4f58ab94af49ae124f107b5.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Иван\.android\build-cache\bf93b2e32f11871df5ef9d585a21b507cd20aab6\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\36e73297ffe8564a45a847f153800cb76a9ddda6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="55d764fefc3262b18baf0f933fa67c107e40ceab">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_4677b5650ef541a40398700a6567d21493afe2c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\2d47014c288ec6bc7af5c870962b0ca8db07c1d6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_d1c3f9d423208d03532a0f5e5ff330808367e162.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\ad26724d3ffc04992cc86c024e0b9d4c7c4994d8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_11a00d97c5b3a546990f86e1c1b6e2364c08e6ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\d3ed40c4da09a05cf2235b2c6056b7d034b95039\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_171d2d43b137ba8060a5b623d7e9d1c015cc8226.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\073d3b2b6078c684c9cd079a00416e5caeb43a79\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_517a6a2192fd70ed937c03dad531d7948cdca6a4\classes.dex" />
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_7656fc7cb604e3e47cb5d1cce5246c5dfdbdb11d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\Android\Projects\Tabata\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\f66a79b52474322f9dba1a28979eb68a22434e20\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="674668b2bfba163817a83f7e762cca3631c13b11">
-        <dex dex="D:\Android\Projects\Tabata\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_57d28123c1cf39aabe8b1103cb7855d9992b5bf6\classes.dex" />
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_a7873c5d4acbe0e0cdf7ca0c10090e71068ac031.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\пользователь\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\library-2.4.0_c4242738ed935219188eb81d5d5e79751c814c25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\пользователь\.android\build-cache\a2a6c26ae5bcd3a6605ff98367419a9058ebbaae\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Android\Projectes\Tabata\app\build\intermediates\pre-dexed\debug\classes_51f78464aac52aa06d7401f5c024ec68f08233fa.jar" />
     </item>
 
 </items>

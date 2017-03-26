@@ -3,17 +3,14 @@ package com.production.sidorov.ivan.tabata;
 import android.content.Context;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
-import android.support.v4.util.TimeUtils;
+import android.support.annotation.StringDef;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
-
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -54,15 +51,16 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
 
         String name = mCursor.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
 
-        long dateInMillis = mCursor.getLong(WorkoutDBHelper.INDEX_WORKOUT_DATE);
-        long workoutTime = mCursor.getLong(WorkoutDBHelper.INDEX_WORKOUT_TIME);
-
-        long restTime = mCursor.getLong(WorkoutDBHelper.INDEX_REST_TIME);
-        int numRounds = mCursor.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
+        String workoutTime = mCursor.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
+        String restTime = mCursor.getString(WorkoutDBHelper.INDEX_REST_TIME);
+        int  numRounds = mCursor.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
 
         holder.itemView.setTag(id);
-        holder.mWorkoutTextView.setText(name);
-        holder.mWorkoutTime.setText(Long.toString(dateInMillis));
+
+        holder.mWorkoutTitleTextView.setText(name);
+        holder.mWorkoutTimeTextView.setText(workoutTime);
+        holder.mRestTimeTextView.setText(restTime);
+        holder.mRoundsTextView.setText(String.valueOf(numRounds));
     }
 
     @Override
@@ -75,14 +73,21 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
 
     class WorkoutAdapterViewHolder extends RecyclerView.ViewHolder {
 
-        final TextView mWorkoutTextView;
-        final TextView mWorkoutTime;
+        final TextView mWorkoutTitleTextView;
+        final TextView mWorkoutTimeTextView;
+        final TextView mRestTimeTextView;
+        final TextView mRoundsTextView;
+
 
 
         WorkoutAdapterViewHolder(View view) {
             super(view);
-            mWorkoutTextView = (TextView) view.findViewById(R.id.tv_workout_data);
-            mWorkoutTime = (TextView) view.findViewById(R.id.tv_time);
+
+            mWorkoutTitleTextView = (TextView) view.findViewById(R.id.titleTextView);
+            mWorkoutTimeTextView = (TextView) view.findViewById(R.id.workoutTimeTextView);
+            mRestTimeTextView = (TextView) view.findViewById(R.id.restTimeTextView);
+            mRoundsTextView = (TextView) view.findViewById(R.id.roundsTimeTextView);
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

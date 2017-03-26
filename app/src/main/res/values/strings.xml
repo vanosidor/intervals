@@ -18,5 +18,8 @@
     <!--Format time -->
     <string name="format_time_with_hours"> %1$02d:%2$02d:%3$02d </string>
     <string name="format_time"> %1$02d:%2$02d </string>
-    <string name="time_default">00:00</string>>
+    <string name="time_default">00:00</string>
+
+    <!-- Workout activity -->
+    <string name="round_title">Round</string>>
 </resources>

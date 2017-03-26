@@ -30,7 +30,7 @@ import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
 
 public class WorkoutActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    private TextView mWorkoutDetails;
+
     private Uri mUri;
 
     public static final String TAG = WorkoutActivity.class.getSimpleName();
@@ -41,23 +41,38 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     private boolean mServiceIsBound;
 
 
-    private Button timerButton;
-    private TextView timerTextView;
-    private TextView timerTextView1;
-    private TextView timerTextView2;
+
+
+    //UI
+    private TextView mWorkoutNameTextView;
+    private TextView mTimeTextView;
+    private TextView mWorkoutTypeTextView;
+    private HoloCircularProgressBar mProgressBar;
+    private TextView mRoundsTitleTextView;
+    private TextView mCurrentRoundTextView;
+    private Button mStartButton;
+    private Button mStopButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Log.v(TAG, "OnCreate");
         setContentView(R.layout.activity_workout);
 
-        mWorkoutDetails = (TextView) findViewById(R.id.tv_workout_data_details);
 
-        timerButton = (Button) findViewById(R.id.btn_test);
-        timerTextView = (TextView) findViewById(R.id.tv_timer);
-        timerTextView1 = (TextView) findViewById(R.id.tv_timer1);
-        timerTextView2 = (TextView) findViewById(R.id.tv_timer2);
+
+        mStartButton = (Button) findViewById(R.id.startButton);
+        mStopButton = (Button)findViewById(R.id.stopButton);
+
+        mWorkoutNameTextView = (TextView) findViewById(R.id.workoutNameTextView);
+        mTimeTextView = (TextView) findViewById(R.id.timeTextView);
+        mWorkoutTypeTextView = (TextView) findViewById(R.id.workoutTypeTextView);
+        mRoundsTitleTextView = (TextView)findViewById(R.id.roundsTitleTextView);
+        mCurrentRoundTextView = (TextView)findViewById(R.id.currentRoundTextView);
+
+        mRoundsTitleTextView.setText(R.string.round_title);
+
 
         mUri = getIntent().getData();
 
@@ -79,20 +94,20 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         switch (action) {
             case TimerWrapper.BROADCAST_WORKOUT_TICK: {
                 long millisUntilFinished = intent.getLongExtra(TimerWrapper.INTENT_WORKOUT_EXTRA, 0);
-                timerTextView1.setText(Long.toString(millisUntilFinished / 1000) + " seconds");
+                mTimeTextView.setText(Long.toString(millisUntilFinished / 1000) + " seconds");
                 //Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished / 1000);
                 break;
             }
             case TimerWrapper.BROADCAST_REST_TICK: {
                 long millisUntilFinished = intent.getLongExtra(TimerWrapper.INTENT_REST_EXTRA, 0);
-                timerTextView1.setText(Long.toString(millisUntilFinished / 1000) + " seconds");
+                mTimeTextView.setText(Long.toString(millisUntilFinished / 1000) + " seconds");
             }
             case TimerWrapper.BROADCAST_WORKOUT_FINISH: {
-                timerTextView2.setText("workout finished");
+                mWorkoutTypeTextView.setText("workout finished");
                 break;
             }
             case TimerWrapper.BROADCAST_REST_FINISH: {
-                timerTextView2.setText("rest finished");
+                mWorkoutTypeTextView.setText("rest finished");
                 break;
             }
         }
@@ -178,7 +193,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
 
         String name = data.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
 
-        mWorkoutDetails.setText(name);
+        mWorkoutNameTextView.setText(name);
     }
 
     @Override
@@ -235,7 +250,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
      */
     private void updateUIStartRun() {
         //mUpdateTimeHandler.sendEmptyMessage(MSG_UPDATE_TIME);
-        timerButton.setText("Stop");
+        mStartButton.setText("Stop");
     }
 
     /**
@@ -243,7 +258,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
      */
     private void updateUIStopRun() {
         // mUpdateTimeHandler.removeMessages(MSG_UPDATE_TIME);
-        timerButton.setText("Start");
+        mStartButton.setText("Start");
     }
 
 
