@@ -21,5 +21,10 @@
     <string name="time_default">00:00</string>
 
     <!-- Workout activity -->
-    <string name="round_title">Round</string>>
+    <string name="round_title">Round</string>
+    <string name="timer_start">Start</string>
+    <string name="timer_cancel">Cancel</string>
+    <string name="format_rounds">1/%1$1d</string>
+
+
 </resources>

@@ -4,30 +4,6 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\close.png"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\stop.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\stop.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_stop_black_24dp.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-xhdpi\\ic_stop_black_24dp.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\close.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\close.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\timer.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\timer.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close_black_24dp.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-xhdpi\\ic_close_black_24dp.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_timer_black_24dp.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-xhdpi\\ic_timer_black_24dp.png"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_timer_black_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xhdpi\\ic_timer_black_24dp.png"
     },

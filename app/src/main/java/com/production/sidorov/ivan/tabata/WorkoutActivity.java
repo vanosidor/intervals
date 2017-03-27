@@ -60,8 +60,6 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         Log.v(TAG, "OnCreate");
         setContentView(R.layout.activity_workout);
 
-
-
         mStartButton = (Button) findViewById(R.id.startButton);
         mStopButton = (Button)findViewById(R.id.stopButton);
 
@@ -72,6 +70,8 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         mCurrentRoundTextView = (TextView)findViewById(R.id.currentRoundTextView);
 
         mRoundsTitleTextView.setText(R.string.round_title);
+        mStartButton.setText(R.string.timer_start);
+        mStopButton.setText(R.string.timer_cancel);
 
 
         mUri = getIntent().getData();
@@ -192,8 +192,13 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         }
 
         String name = data.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
+        String workoutTime = data.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
+        String restTime = data.getString(WorkoutDBHelper.INDEX_REST_TIME);
+        int rounds = data.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
 
         mWorkoutNameTextView.setText(name);
+        mTimeTextView.setText(workoutTime);
+        mCurrentRoundTextView.setText(getString(R.string.format_rounds,rounds));
     }
 
     @Override
