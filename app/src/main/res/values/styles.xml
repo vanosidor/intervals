@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="circularProgressBarStyle">@style/CircularProgressBar</item>
     </style>
 
     <!-- BetterPickerFragment style -->
@@ -30,7 +31,6 @@
         <item name="progress_color">@color/colorAccent</item>
         <item name="progress_background_color">@android:color/white</item>
         <item name="marker_color">#ffff4444</item>
-
         <item name="marker_visible">false</item>
         <item name="thumb_visible">false</item>
     </style>

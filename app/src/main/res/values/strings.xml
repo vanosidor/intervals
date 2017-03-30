@@ -25,6 +25,10 @@
     <string name="timer_start">Start</string>
     <string name="timer_cancel">Cancel</string>
     <string name="format_rounds">1/%1$1d</string>
+    <string name="format_rounds_started">%1$d/%2$1d</string>
+
+    <string name="rest_text">Rest</string>
+    <string name="workout_text">Workout</string>
 
 
 </resources>

@@ -45,8 +45,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
     public void onBindViewHolder(WorkoutAdapterViewHolder holder, int position) {
         mCursor.moveToPosition(position);
 
-
-
         int id = mCursor.getInt(WorkoutDBHelper.INDEX_WORKOUT_ID);
 
         String name = mCursor.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
@@ -77,8 +75,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         final TextView mWorkoutTimeTextView;
         final TextView mRestTimeTextView;
         final TextView mRoundsTextView;
-
-
 
         WorkoutAdapterViewHolder(View view) {
             super(view);
