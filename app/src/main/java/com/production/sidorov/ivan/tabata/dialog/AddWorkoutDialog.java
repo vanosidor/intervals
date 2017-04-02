@@ -2,8 +2,11 @@ package com.production.sidorov.ivan.tabata.dialog;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringDef;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,6 +24,7 @@ import com.codetroopers.betterpickers.hmspicker.HmsPickerBuilder;
 import com.codetroopers.betterpickers.hmspicker.HmsPickerDialogFragment;
 import com.production.sidorov.ivan.tabata.R;
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
+import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 /**
  * Created by Иван on 21.03.2017.
@@ -183,6 +187,8 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
 
         View rootView = inflater.inflate(R.layout.add_workout_fragment,container,false);
 
+        Bundle arguments = getArguments();
+
         mOkButton = (Button)rootView.findViewById(R.id.okButton);
         mCancelButton = (Button)rootView.findViewById(R.id.cancelButton);
 
@@ -203,12 +209,41 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
         mNumRoundsTextView = (TextView)rootView.findViewById(R.id.numRoundsTextView);
 
         //Set text for static views
+        if(arguments!=null)
+        {
+            long date = arguments.getLong("Date",0);
+
+            String stringDate = Long.toString(date);
+            Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
+            uri = uri.buildUpon().appendPath(stringDate).build();
+
+            Cursor c = getActivity().getContentResolver().query(uri, WorkoutDBHelper.WORKOUT_PROJECTION,null,null,null);
+
+            if (c != null && c.moveToFirst()) {
+
+                String name = c.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
+                String workoutTime = c.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
+                String restTime = c.getString(WorkoutDBHelper.INDEX_REST_TIME);
+                int rounds = c.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
+
+                mInputWorkoutTimeTextView.setText(workoutTime);
+                mInputRestTimeTextView.setText(restTime);
+                mWorkoutTitleEditText.setText(name);
+                mNumRoundsTextView.setText(String.valueOf(rounds));
+            }
+
+        }
+        else {
+            mInputWorkoutTimeTextView.setText(R.string.time_default);
+            mInputRestTimeTextView.setText(R.string.time_default);
+            mNumRoundsTextView.setText("1");
+        }
+
         mWorkoutTitleTextView.setText(R.string.workout_title);
         mWorkoutTimeTitleTextView.setText(R.string.workout_time_title);
         mRestTimeTitleTextView.setText(R.string.rest_time_title);
         mRoundsTitleTextView.setText(R.string.rounds_title);
-        mInputWorkoutTimeTextView.setText(R.string.time_default);
-        mInputRestTimeTextView.setText(R.string.time_default);
+
 
         //Set onClick Listeners
         mOkButton.setOnClickListener(this);

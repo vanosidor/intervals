@@ -1,5 +1,13 @@
 [
     {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\close.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\close.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_close_black_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-xxhdpi\\ic_close_black_24dp.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_close_black_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxhdpi\\ic_close_black_24dp.png"
     },
@@ -18,6 +26,22 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_stop_black_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxhdpi\\ic_stop_black_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\timer.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\timer.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_stop_black_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-xxhdpi\\ic_stop_black_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\stop.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\stop.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_timer_black_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-xxhdpi\\ic_timer_black_24dp.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\close.png",

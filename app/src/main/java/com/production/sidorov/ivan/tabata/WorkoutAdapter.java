@@ -49,11 +49,13 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
 
         String name = mCursor.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
 
+        long workoutDate = mCursor.getLong(WorkoutDBHelper.INDEX_WORKOUT_DATE);
+
         String workoutTime = mCursor.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
         String restTime = mCursor.getString(WorkoutDBHelper.INDEX_REST_TIME);
         int  numRounds = mCursor.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
 
-        holder.itemView.setTag(id);
+        holder.itemView.setTag(workoutDate);
 
         holder.mWorkoutTitleTextView.setText(name);
         holder.mWorkoutTimeTextView.setText(workoutTime);

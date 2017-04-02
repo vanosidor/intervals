@@ -15,12 +15,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
+import android.widget.Toast;
 
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
-import com.production.sidorov.ivan.tabata.utilitis.FakeDataUtils;
 
 public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler,
         LoaderManager.LoaderCallbacks<Cursor>,
@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String WORKOUT_DATA = "workout_data";
+
+    public static final int ADD_NEW_WORKOUT_MODE = 0;
+    public static final int EDIT_WORKOUT_MODE = 1;
 
     private RecyclerView mRecyclerView;
     private WorkoutAdapter mWorkoutAdapter;
@@ -76,20 +79,23 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
             // Called when a user swipes left or right on a ViewHolder
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
+                long date = (long) viewHolder.itemView.getTag();
 
-                // Retrieve the id of the task to delete
-                int id = (int) viewHolder.itemView.getTag();
+                if (swipeDir == ItemTouchHelper.LEFT){
 
-                // Build appropriate uri with String row id appended
-                String stringId = Integer.toString(id);
-                Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
-                uri = uri.buildUpon().appendPath(stringId).build();
 
-                getContentResolver().delete(uri, null, null);
+                    String stringDate = Long.toString(date);
+                    Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
+                    uri = uri.buildUpon().appendPath(stringDate).build();
 
-                //Restart the loader to re-query for all tasks after a deletion
-                getSupportLoaderManager().restartLoader(ID_WORKOUT_LOADER, null, MainActivity.this);
+                    getContentResolver().delete(uri, null, null);
 
+                    //Restart the loader to re-query for all tasks after a deletion
+                    getSupportLoaderManager().restartLoader(ID_WORKOUT_LOADER, null, MainActivity.this);
+
+                } else {
+                    showWorkoutAddDialog(date);
+                }
             }
         }).attachToRecyclerView(mRecyclerView);
 
@@ -130,7 +136,18 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     //onClick Floating Action Button
     public void addWorkout(View view) {
+        showWorkoutAddDialog(0);
+    }
+
+    public void showWorkoutAddDialog(long date){
         AddWorkoutDialog addWorkoutDialog = new AddWorkoutDialog();
+
+        Bundle b = new Bundle();
+        if(date!= 0) {
+            b.putLong("Date",date);
+            addWorkoutDialog.setArguments(b);
+        }
+        else addWorkoutDialog.setArguments(null);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
