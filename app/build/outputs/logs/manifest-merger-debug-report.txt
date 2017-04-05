@@ -26,6 +26,7 @@ MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Иван\.andro
 MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\5263e32579ac01a28ea208e55fe1d42e481011ef\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\bf93b2e32f11871df5ef9d585a21b507cd20aab6\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Иван\.android\build-cache\91f312dc368cf51c2fa5c4155b3d57a3192d0040\output\AndroidManifest.xml:29:5-20
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.0] C:\Users\Иван\.android\build-cache\8c029c93b13010828588f14bd2cdbc259b521518\output\AndroidManifest.xml:11:5-20
 	android:label
 		ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
@@ -93,6 +94,7 @@ MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Иван\.andro
 MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\5263e32579ac01a28ea208e55fe1d42e481011ef\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Иван\.android\build-cache\bf93b2e32f11871df5ef9d585a21b507cd20aab6\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Иван\.android\build-cache\91f312dc368cf51c2fa5c4155b3d57a3192d0040\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.0] C:\Users\Иван\.android\build-cache\8c029c93b13010828588f14bd2cdbc259b521518\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.0] C:\Users\Иван\.android\build-cache\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion

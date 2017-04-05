@@ -76,6 +76,10 @@
         "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout\\radial_time_picker_dialog.xml"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\workout_list_item_swipe.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout\\workout_list_item_swipe.xml"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\layout\\notification_action_tombstone.xml"
     },
@@ -184,6 +188,10 @@
         "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout\\timezonepickerview.xml"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\workout_list_item_right_menu.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout\\workout_list_item_right_menu.xml"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
@@ -286,6 +294,10 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\\output\\res\\layout\\design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\workout_list_item_left_menu.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout\\workout_list_item_left_menu.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
@@ -460,6 +472,10 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\workout_list_item_content.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout\\workout_list_item_content.xml"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
@@ -494,10 +510,6 @@
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\date_picker_dialog.xml",
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\date_picker_dialog.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\workout_list_item.xml",
-        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout\\workout_list_item.xml"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
