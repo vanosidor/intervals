@@ -51,6 +51,99 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
     private TextView mRoundsTitleTextView;
     private TextView mNumRoundsTextView;
 
+    long mDate;
+    private boolean isEdit;
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.add_workout_fragment,container,false);
+
+        Bundle arguments = getArguments();
+
+        mOkButton = (Button)rootView.findViewById(R.id.okButton);
+        mCancelButton = (Button)rootView.findViewById(R.id.cancelButton);
+
+        mOkButton.setText(R.string.btn_ok);
+        mCancelButton.setText(R.string.btn_cancel);
+
+        mRoundsSeekBar = (SeekBar)rootView.findViewById(R.id.roundsSeekBar);
+        mWorkoutTitleTextInputLayout = (TextInputLayout)rootView.findViewById(R.id.intervalTitleTextInputLayout);
+        mWorkoutTitleEditText = (EditText)rootView.findViewById(R.id.intervalTitleEditText);
+
+        mWorkoutTitleTextView = (TextView)rootView.findViewById(R.id.workoutTitleTextView);
+        mWorkoutTimeTitleTextView = (TextView)rootView.findViewById(R.id.workoutTimeTitleTextView);
+        mRestTimeTitleTextView = (TextView)rootView.findViewById(R.id.restTimeTitleTextView);
+        mRoundsTitleTextView = (TextView)rootView.findViewById(R.id.roundsTitleTextView);
+
+        mInputWorkoutTimeTextView = (TextView)rootView.findViewById(R.id.inputWorkoutTimeTextView);
+        mInputRestTimeTextView = (TextView)rootView.findViewById(R.id.inputRestTimeTextView);
+        mNumRoundsTextView = (TextView)rootView.findViewById(R.id.numRoundsTextView);
+
+        //Set text for static views
+        if(arguments!=null)
+        {
+            isEdit = true;
+
+            mDate = arguments.getLong("Date",0);
+
+            String stringDate = Long.toString(mDate);
+            Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
+            uri = uri.buildUpon().appendPath(stringDate).build();
+
+            Cursor c = getActivity().getContentResolver().query(uri, WorkoutDBHelper.WORKOUT_PROJECTION,null,null,null);
+
+            if (c != null && c.moveToFirst()) {
+
+                String name = c.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
+                String workoutTime = c.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
+                String restTime = c.getString(WorkoutDBHelper.INDEX_REST_TIME);
+                int rounds = c.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
+
+                mInputWorkoutTimeTextView.setText(workoutTime);
+                mInputRestTimeTextView.setText(restTime);
+                mWorkoutTitleEditText.setText(name);
+                mNumRoundsTextView.setText(String.valueOf(rounds));
+            }
+
+        }
+        else {
+            mInputWorkoutTimeTextView.setText(R.string.time_default);
+            mInputRestTimeTextView.setText(R.string.time_default);
+            mNumRoundsTextView.setText("1");
+        }
+
+        mWorkoutTitleTextView.setText(R.string.workout_title);
+        mWorkoutTimeTitleTextView.setText(R.string.workout_time_title);
+        mRestTimeTitleTextView.setText(R.string.rest_time_title);
+        mRoundsTitleTextView.setText(R.string.rounds_title);
+
+
+        //Set onClick Listeners
+        mOkButton.setOnClickListener(this);
+        mCancelButton.setOnClickListener(this);
+        mInputWorkoutTimeTextView.setOnClickListener(this);
+        mInputRestTimeTextView.setOnClickListener(this);
+
+        //Set onSeekBarChangeListener
+        mRoundsSeekBar.setOnSeekBarChangeListener(this);
+
+        return rootView;
+    }
+
+
+    //onAttach to activity
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mListener = (OnFragmentButtonsClickListener)context;
+        }
+        catch (ClassCastException ex){
+            throw new ClassCastException(context.toString()+" must implement OnFragmentButtonClickListener");
+        }
+    }
 
     //Dialog Set callback
     @Override
@@ -115,6 +208,8 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
             //Button Ok clicked
             case R.id.okButton:{
 
+                long date;
+
                 if(mWorkoutTitleEditText.getText().toString().trim().length() == 0
                         || mInputWorkoutTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))
                         || mInputRestTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))) {
@@ -122,7 +217,7 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
                     return;
                 }
 
-                long date = System.currentTimeMillis();
+
                 String title = String.valueOf(mWorkoutTitleEditText.getText());
                 String workoutTime = String.valueOf(mInputWorkoutTimeTextView.getText());
                 String restTime = String.valueOf(mInputWorkoutTimeTextView.getText());
@@ -130,14 +225,32 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
 
                 ContentValues contentValues = new ContentValues();
 
-                contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_DATE,date);
                 contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_NAME,title);
                 contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_WORKOUT_TIME, workoutTime);
                 contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_REST_TIME, restTime);
                 contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_ROUNDS_NUM, rounds);
 
-                getContext().getContentResolver().insert(WorkoutContract.WorkoutEntry.CONTENT_URI,contentValues);
+                //if edit workout
+                if (isEdit){
+                    date = mDate;
 
+                    String stringDate = Long.toString(date);
+                    Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
+                    uri = uri.buildUpon().appendPath(stringDate).build();
+
+                    contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_DATE,date);
+                    getContext().getContentResolver().update(uri,contentValues,null,null);
+                }
+
+                //if create new workout
+                else{
+
+                    date = System.currentTimeMillis();
+                    contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_DATE,date);
+                    getContext().getContentResolver().insert(WorkoutContract.WorkoutEntry.CONTENT_URI,contentValues);
+                }
+
+                //hide dialog
                 fragmentManager.beginTransaction().remove(this).commit();
                 mListener.onButtonOkClicked();
                 break;
@@ -169,93 +282,5 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
             default:Log.d(TAG, "onClick:other button clicked in fragment ");
         }
     }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        try {
-            mListener = (OnFragmentButtonsClickListener)context;
-        }
-        catch (ClassCastException ex){
-            throw new ClassCastException(context.toString()+" must implement OnFragmentButtonClickListener");
-        }
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View rootView = inflater.inflate(R.layout.add_workout_fragment,container,false);
-
-        Bundle arguments = getArguments();
-
-        mOkButton = (Button)rootView.findViewById(R.id.okButton);
-        mCancelButton = (Button)rootView.findViewById(R.id.cancelButton);
-
-        mOkButton.setText(R.string.btn_ok);
-        mCancelButton.setText(R.string.btn_cancel);
-
-        mRoundsSeekBar = (SeekBar)rootView.findViewById(R.id.roundsSeekBar);
-        mWorkoutTitleTextInputLayout = (TextInputLayout)rootView.findViewById(R.id.intervalTitleTextInputLayout);
-        mWorkoutTitleEditText = (EditText)rootView.findViewById(R.id.intervalTitleEditText);
-
-        mWorkoutTitleTextView = (TextView)rootView.findViewById(R.id.workoutTitleTextView);
-        mWorkoutTimeTitleTextView = (TextView)rootView.findViewById(R.id.workoutTimeTitleTextView);
-        mRestTimeTitleTextView = (TextView)rootView.findViewById(R.id.restTimeTitleTextView);
-        mRoundsTitleTextView = (TextView)rootView.findViewById(R.id.roundsTitleTextView);
-
-        mInputWorkoutTimeTextView = (TextView)rootView.findViewById(R.id.inputWorkoutTimeTextView);
-        mInputRestTimeTextView = (TextView)rootView.findViewById(R.id.inputRestTimeTextView);
-        mNumRoundsTextView = (TextView)rootView.findViewById(R.id.numRoundsTextView);
-
-        //Set text for static views
-        if(arguments!=null)
-        {
-            long date = arguments.getLong("Date",0);
-
-            String stringDate = Long.toString(date);
-            Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
-            uri = uri.buildUpon().appendPath(stringDate).build();
-
-            Cursor c = getActivity().getContentResolver().query(uri, WorkoutDBHelper.WORKOUT_PROJECTION,null,null,null);
-
-            if (c != null && c.moveToFirst()) {
-
-                String name = c.getString(WorkoutDBHelper.INDEX_WORKOUT_NAME);
-                String workoutTime = c.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
-                String restTime = c.getString(WorkoutDBHelper.INDEX_REST_TIME);
-                int rounds = c.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
-
-                mInputWorkoutTimeTextView.setText(workoutTime);
-                mInputRestTimeTextView.setText(restTime);
-                mWorkoutTitleEditText.setText(name);
-                mNumRoundsTextView.setText(String.valueOf(rounds));
-            }
-
-        }
-        else {
-            mInputWorkoutTimeTextView.setText(R.string.time_default);
-            mInputRestTimeTextView.setText(R.string.time_default);
-            mNumRoundsTextView.setText("1");
-        }
-
-        mWorkoutTitleTextView.setText(R.string.workout_title);
-        mWorkoutTimeTitleTextView.setText(R.string.workout_time_title);
-        mRestTimeTitleTextView.setText(R.string.rest_time_title);
-        mRoundsTitleTextView.setText(R.string.rounds_title);
-
-
-        //Set onClick Listeners
-        mOkButton.setOnClickListener(this);
-        mCancelButton.setOnClickListener(this);
-        mInputWorkoutTimeTextView.setOnClickListener(this);
-        mInputRestTimeTextView.setOnClickListener(this);
-
-        //Set onSeekBarChangeListener
-        mRoundsSeekBar.setOnSeekBarChangeListener(this);
-
-        return rootView;
-    }
-
 
 }

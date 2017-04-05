@@ -184,6 +184,33 @@ public class WorkoutProvider extends ContentProvider {
 
     @Override
     public int update(Uri uri, ContentValues contentValues, String s, String[] strings) {
-        return 0;
+
+        //get writable database
+        SQLiteDatabase db = mDBHelper.getWritableDatabase();
+
+        //Keep track of if an update occurs
+        int tasksUpdated;
+
+        // match code
+        int match = sUriMatcher.match(uri);
+
+        switch (match) {
+            case CODE_WORKOUT_WITH_DATE:
+                //update a single task by getting the id
+                String normalizedUtcDateString = uri.getPathSegments().get(1);
+                //using selections
+                tasksUpdated = db.update(WorkoutContract.WorkoutEntry.TABLE_NAME, contentValues, WorkoutContract.WorkoutEntry.COLUMN_DATE + " = ? ", new String[]{normalizedUtcDateString});
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown uri: " + uri);
+        }
+
+        if (tasksUpdated != 0) {
+            //set notifications if a task was updated
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
+
+        // return number of tasks updated
+        return tasksUpdated;
     }
 }

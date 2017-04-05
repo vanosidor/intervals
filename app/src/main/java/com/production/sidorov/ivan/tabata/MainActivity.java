@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     }
 
     public void showWorkoutAddDialog(long date){
+
         AddWorkoutDialog addWorkoutDialog = new AddWorkoutDialog();
 
         Bundle b = new Bundle();
@@ -172,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     }
 
 
-    //is it need?
+    //is it really need?
     private class VerticalSpaceItemDecoration extends RecyclerView.ItemDecoration{
 
         private final int mVerticalSpaceHeight;
