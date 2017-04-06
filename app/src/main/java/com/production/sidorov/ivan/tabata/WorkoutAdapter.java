@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
@@ -67,7 +66,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
 
         holder.itemView.setTag(workoutDate);
 
-        holder.workoutTitleTextView.setText(name);
+        holder.workoutNameTextView.setText(name);
         holder.workoutTimeTextView.setText(workoutTime);
         holder.restTimeTextView.setText(restTime);
         holder.roundsTextView.setText(String.valueOf(numRounds));
@@ -85,10 +84,15 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
     //Workout ViewHolder implementation
     class WorkoutAdapterViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
 
-        final TextView workoutTitleTextView;
+        final TextView workoutNameTextView;
         final TextView workoutTimeTextView;
         final TextView restTimeTextView;
         final TextView roundsTextView;
+
+        final TextView setsTitleTextView;
+        final TextView workoutTitleTextView;
+        final TextView restTitleTextView;
+
 
         final View contentView;
 
@@ -101,10 +105,18 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         WorkoutAdapterViewHolder(View view) {
             super(view);
 
-            workoutTitleTextView = (TextView) view.findViewById(R.id.titleTextView);
+            workoutNameTextView = (TextView) view.findViewById(R.id.workoutNameTextView);
             workoutTimeTextView = (TextView) view.findViewById(R.id.workoutTimeTextView);
             restTimeTextView = (TextView) view.findViewById(R.id.restTimeTextView);
             roundsTextView = (TextView) view.findViewById(R.id.roundsTimeTextView);
+
+            setsTitleTextView = (TextView)view.findViewById(R.id.setsTitleTextView);
+            workoutTitleTextView= (TextView)view.findViewById(R.id.workoutListTitleTextView);
+            restTitleTextView = (TextView)view.findViewById(R.id.restListTitleTextView);
+
+            setsTitleTextView.setText(R.string.sets_title);
+            workoutTitleTextView.setText(R.string.workout_list_title);
+            restTitleTextView.setText(R.string.rest_list_title);
 
             contentView = view.findViewById(R.id.smContentView);
 

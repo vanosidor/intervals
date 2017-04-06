@@ -24,6 +24,10 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\stop.png"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_add_white_24dp.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_add_white_24dp.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_border_color_white_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_border_color_white_24dp.png"
     },

@@ -60,6 +60,10 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_delete_white_24dp.png"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_add_white_24dp.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_add_white_24dp.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_border_color_white_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_border_color_white_24dp.png"
     }

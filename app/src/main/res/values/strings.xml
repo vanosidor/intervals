@@ -30,5 +30,9 @@
     <string name="rest_text">Rest</string>
     <string name="workout_text">Workout</string>
 
+    <!-- Workout list Item -->
+    <string name="sets_title">sets</string>
+    <string name="workout_list_title">Workout</string>
+    <string name="rest_list_title">Rest</string>
 
 </resources>
