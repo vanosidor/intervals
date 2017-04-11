@@ -66,7 +66,7 @@ public class HoloCircularProgressBar extends View{
     private final RectF mCircleBounds = new RectF();
 
     /**
-     * the rect for the thumb square
+     * the dialog_background_blue_primary for the thumb square
      */
     private final RectF mSquareRect = new RectF();
 

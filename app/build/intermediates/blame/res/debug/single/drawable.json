@@ -132,16 +132,12 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\drawable\\recurrence_bubble_fill.xml"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\time_picker_purple.9.png",
-        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable\\time_picker_purple.9.png"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
@@ -296,6 +292,10 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\drawable\\notification_tile_bg.xml"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_custom_text.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable\\button_custom_text.xml"
+    },
+    {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\done_background_color_dark.xml",
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\drawable\\done_background_color_dark.xml"
     },
@@ -400,6 +400,10 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\drawable\\ic_backspace_dark.xml"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_background_blue_primary.9.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable\\dialog_background_blue_primary.9.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner_background_holo_light.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\drawable\\spinner_background_holo_light.xml"
     },
@@ -446,6 +450,10 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_custom_shape.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable\\button_custom_shape.xml"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",

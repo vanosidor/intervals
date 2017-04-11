@@ -1,6 +1,9 @@
 package com.production.sidorov.ivan.tabata;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,6 +32,7 @@ import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
+import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
 import com.tubb.smrv.SwipeMenuRecyclerView;
 
 public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler,
@@ -78,6 +82,29 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         // FakeDataUtils.insertFakeData(this);
 
     }
+
+  /*  @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_START_TIMER));
+        registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_FINISH_ALL));
+    }*/
+
+    /*@Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(broadcastReceiver);
+    }*/
+
+    /*BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            if (intent == null) return;
+            String action = intent.getAction();
+
+        }
+    };*/
 
 
     //onClick listItem handler

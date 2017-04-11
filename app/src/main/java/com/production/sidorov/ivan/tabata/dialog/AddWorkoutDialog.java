@@ -40,7 +40,7 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
     private Button mCancelButton;
 
     private SeekBar mRoundsSeekBar;
-    private TextInputLayout mWorkoutTitleTextInputLayout;
+    //private TextInputLayout mWorkoutTitleTextInputLayout;
     private EditText mWorkoutTitleEditText;
 
     private TextView mWorkoutTitleTextView;
@@ -69,7 +69,7 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
         mCancelButton.setText(R.string.btn_cancel);
 
         mRoundsSeekBar = (SeekBar)rootView.findViewById(R.id.roundsSeekBar);
-        mWorkoutTitleTextInputLayout = (TextInputLayout)rootView.findViewById(R.id.intervalTitleTextInputLayout);
+        //mWorkoutTitleTextInputLayout = (TextInputLayout)rootView.findViewById(R.id.intervalTitleTextInputLayout);
         mWorkoutTitleEditText = (EditText)rootView.findViewById(R.id.intervalTitleEditText);
 
         mWorkoutTitleTextView = (TextView)rootView.findViewById(R.id.workoutTitleTextView);

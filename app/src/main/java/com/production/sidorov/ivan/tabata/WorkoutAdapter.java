@@ -1,9 +1,13 @@
 package com.production.sidorov.ivan.tabata;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
+import android.media.Image;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,6 +97,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         final TextView workoutTitleTextView;
         final TextView restTitleTextView;
 
+        final ImageView playImageView;
 
         final View contentView;
 
@@ -113,6 +118,8 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             setsTitleTextView = (TextView)view.findViewById(R.id.setsTitleTextView);
             workoutTitleTextView= (TextView)view.findViewById(R.id.workoutListTitleTextView);
             restTitleTextView = (TextView)view.findViewById(R.id.restListTitleTextView);
+
+            playImageView = (ImageView)view.findViewById(R.id.playImageView);
 
             setsTitleTextView.setText(R.string.sets_title);
             workoutTitleTextView.setText(R.string.workout_list_title);
@@ -146,10 +153,35 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
                     swipeHorizontalMenuLayout.smoothCloseMenu(0);
 
                     String stringDate = Long.toString(workoutDate);
-                    Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI;
-                    uri = uri.buildUpon().appendPath(stringDate).build();
+                    final Uri uri = WorkoutContract.WorkoutEntry.CONTENT_URI.buildUpon().appendPath(stringDate).build();
 
-                    mContext.getContentResolver().delete(uri,null,null);
+                    //create dialog
+                    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(mContext);
+                    dialogBuilder.setMessage(R.string.dialog_delete_message);
+
+                    //button Ok click
+                    dialogBuilder.setPositiveButton(R.string.dialog_delete_ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            //delete workout item
+                            mContext.getContentResolver().delete(uri,null,null);
+
+                            dialog.dismiss();
+                        }
+                    });
+
+                    //button Cancel click
+                    dialogBuilder.setNegativeButton(R.string.dialog_delete_cancel, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    //show dialog
+                    dialogBuilder.show();
+
                     break;
                 }
                 //Content View clicked
@@ -166,7 +198,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
                 }
             }
         }
-
     }
 
 

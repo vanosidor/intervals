@@ -28,8 +28,8 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_add_white_24dp.png"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_border_color_white_24dp.png",
-        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_border_color_white_24dp.png"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_edit_color_white_24dp.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_edit_color_white_24dp.png"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_stop_black_24dp.png",
@@ -44,8 +44,8 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_delete_white_24dp.png"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_stop_black_24dp.png",
-        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_stop_black_24dp.png"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_play_green.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_play_green.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\close.png",

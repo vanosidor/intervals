@@ -26,7 +26,6 @@
     <string name="timer_cancel">Cancel</string>
     <string name="format_rounds">1/%1$1d</string>
     <string name="format_rounds_started">%1$d/%2$1d</string>
-
     <string name="rest_text">Rest</string>
     <string name="workout_text">Workout</string>
 
@@ -34,5 +33,8 @@
     <string name="sets_title">sets</string>
     <string name="workout_list_title">Workout</string>
     <string name="rest_list_title">Rest</string>
+    <string name="dialog_delete_message">Are you sure want to delete this workout?</string>
+    <string name="dialog_delete_ok">Ok</string>
+    <string name="dialog_delete_cancel">Cancel</string>
 
 </resources>

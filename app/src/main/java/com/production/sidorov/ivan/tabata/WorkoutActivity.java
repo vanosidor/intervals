@@ -224,7 +224,12 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
                 //Restore Activity state
                 restoreUI(mTimerService);
             }
-            // Update the UI if the service is already running the timer
+            /*
+            *if timer not running and binding service set stop UI(when close notification window and reopen app)
+            * */
+            if(!mTimerService.isTimerRunning()){
+                updateUIStopRun();
+            }
         }
 
         @Override
@@ -263,8 +268,6 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         }
     }
 
-
-
     /**
      * Updates the UI when a run starts
      */
@@ -277,7 +280,6 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
 
         mProgressBar.setProgress(0.0f);
         animateProgressBar(mProgressBar,1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mWorkoutTime));
-
     }
 
     /**
@@ -386,7 +388,6 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     **/
     private void animateProgressBar(final HoloCircularProgressBar progressBar,
                                     final float progress, final int duration) {
-
         mProgressBarAnimator = ObjectAnimator.ofFloat(progressBar, "progress", progress);
         mProgressBarAnimator.setDuration(duration);
         mProgressBarAnimator.setInterpolator(new LinearInterpolator());

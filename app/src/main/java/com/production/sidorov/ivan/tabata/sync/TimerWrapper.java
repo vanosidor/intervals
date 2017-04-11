@@ -10,6 +10,7 @@ import android.util.Log;
 
 public class TimerWrapper {
 
+   // public static final String BROADCAST_START_TIMER = "start_timer";
     public static final String BROADCAST_WORKOUT_TICK = "workout_tick";
     public static final String BROADCAST_REST_TICK = "rest_tick";
     public static final String BROADCAST_WORKOUT_FINISH= "workout_finish";
@@ -124,6 +125,10 @@ public class TimerWrapper {
      *start timer
       */
     void startTimer(){
+
+        /*Intent intentStart = new Intent(BROADCAST_START_TIMER);
+        mContext.sendBroadcast(intentStart);*/
+
         mWorkoutTicker.start();
         mTimerCallbacksHandler.timerStateChange(STATE_WORKOUT);
     }

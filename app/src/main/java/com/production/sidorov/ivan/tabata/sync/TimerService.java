@@ -64,6 +64,7 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
         String action = intent.getAction();
         if(null != action){
             if (action.equals(NotificationUtils.ACTION_CANCEL_WORKOUT_NOTIFICATION)){
+                isTimerRunning = false;
                 stopTimer();
                 stopSelf();
             }
@@ -171,7 +172,7 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
     public void stopTimer() {
         Log.v(TAG, "Stop timer");
         mTimerWrapper.stopTimer();
-        isTimerRunning = false;
+
     }
 
     /**

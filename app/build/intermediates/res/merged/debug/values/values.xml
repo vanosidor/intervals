@@ -1026,6 +1026,9 @@
     <string name="day_of_week_label_typeface" translatable="false">sans-serif</string>
     <string name="day_picker_description">Month grid of days</string>
     <string name="deleted_key">%1$s deleted</string>
+    <string name="dialog_delete_cancel">Cancel</string>
+    <string name="dialog_delete_message">Are you sure want to delete this workout?</string>
+    <string name="dialog_delete_ok">Ok</string>
     <string name="done_label">Done</string>
     <string name="endByDate">; until <ns1:g id="date">%s</ns1:g></string>
     <string name="every_weekday">"Every weekday (Mon\u2013Fri)"</string>
@@ -1125,7 +1128,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -2252,8 +2255,11 @@
         <item name="marker_visible">false</item>
         <item name="thumb_visible">false</item>
     </style>
+    <style name="MyButton" parent="Base.Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@drawable/button_custom_text</item>
+    </style>
     <style name="MyCustomBetterPickerTheme">
-        <item name="bpDialogBackground">@drawable/time_picker_purple</item>
+        <item name="bpDialogBackground">@drawable/dialog_background_blue_primary</item>
         <item name="bpTextColor">@android:color/white</item>
         <item name="bpDeleteIcon">@drawable/ic_backspace_dark</item>
         <item name="bpCheckIcon">@drawable/ic_check_dark</item>
