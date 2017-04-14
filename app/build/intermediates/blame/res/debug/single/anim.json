@@ -1,31 +1,47 @@
 [
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\8340568eb13797d65455da43857f16e9cec141fd\\output\\res\\anim\\design_fab_in.xml"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\8340568eb13797d65455da43857f16e9cec141fd\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
@@ -44,87 +60,7 @@
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_fade_in.xml"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\\output\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\8340568eb13797d65455da43857f16e9cec141fd\\output\\res\\anim\\design_snackbar_in.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_fade_out.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_popup_exit.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_popup_enter.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_fade_in.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\8340568eb13797d65455da43857f16e9cec141fd\\output\\res\\anim\\design_fab_out.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\9ede2efbf8cd112de3d4119aac2c2b12288dfafe\\output\\res\\anim\\design_fab_in.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\8340568eb13797d65455da43857f16e9cec141fd\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\8340568eb13797d65455da43857f16e9cec141fd\\output\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\anim\\abc_fade_out.xml"
     }
 ]

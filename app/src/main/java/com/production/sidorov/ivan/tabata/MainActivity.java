@@ -1,9 +1,11 @@
 package com.production.sidorov.ivan.tabata;
 
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +15,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.Uri;
+import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -32,12 +35,13 @@ import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
+import com.production.sidorov.ivan.tabata.sync.TimerService;
 import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
 import com.tubb.smrv.SwipeMenuRecyclerView;
 
 public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler,
         LoaderManager.LoaderCallbacks<Cursor>,
-        AddWorkoutDialog.OnFragmentButtonsClickListener{
+        AddWorkoutDialog.OnFragmentButtonsClickListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String WORKOUT_DATA = "workout_data";
@@ -51,29 +55,54 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     public static final int ID_WORKOUT_LOADER = 33;
 
 
+    TimerService mTimerService;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "Create");
         setContentView(R.layout.activity_main);
 
         mRecyclerView = (SwipeMenuRecyclerView) findViewById(R.id.rv_workout);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) {
+            @Override
+            public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+                super.onLayoutChildren(recycler, state);
+                /*set green arrow*/
+                Log.d(TAG, "onLayoutChildren");
+                View childView = this.findViewByPosition(1);
+
+                if (childView != null) {
+
+                    findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
+
+                }
+
+            }
+        };
+
+  //      mWorkoutAdapter.getPositionById(3);
 
         mRecyclerView.setLayoutManager(layoutManager);
 
         mRecyclerView.setHasFixedSize(true);
 
-        mWorkoutAdapter = new WorkoutAdapter(this,this);
+        mWorkoutAdapter = new WorkoutAdapter(this, this);
 
         mRecyclerView.setAdapter(mWorkoutAdapter);
 
+
         mRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(3));
 
-        mFloatingActionButtonAdd = (FloatingActionButton)findViewById(R.id.fabAddWorkout);
+        mFloatingActionButtonAdd = (FloatingActionButton) findViewById(R.id.fabAddWorkout);
 
 
         getSupportLoaderManager().initLoader(ID_WORKOUT_LOADER, null, this);
+
+        /*set green arrow*/
+        // mRecyclerView.getLayoutManager().findViewByPosition(1).findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
 
         /* remove all workouts */
         // getContentResolver().delete(WorkoutContract.WorkoutEntry.CONTENT_URI,null,null);
@@ -81,36 +110,59 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         /*insert fake data*/
         // FakeDataUtils.insertFakeData(this);
 
+
+
     }
 
-  /*  @Override
-    protected void onResume() {
-        super.onResume();
-        registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_START_TIMER));
-        registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_FINISH_ALL));
-    }*/
 
-    /*@Override
-    protected void onPause() {
-        super.onPause();
-        unregisterReceiver(broadcastReceiver);
-    }*/
+    @Override
+    protected void onStart() {
+        Log.d(TAG, "OnStart");
+        super.onStart();
 
-    /*BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        Intent i = new Intent(this, TimerService.class);
+        bindService(i, mConnection, 0);
+        Log.d(TAG, "Bind service");
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(TAG, "OnStop");
+        super.onStop();
+        unbindService(mConnection);
+        Log.d(TAG, "Unbind service");
+    }
+
+
+    private ServiceConnection mConnection = new ServiceConnection() {
+
         @Override
-        public void onReceive(Context context, Intent intent) {
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            Log.d(TAG, "onServiceConnected");
+            TimerService.RunServiceBinder binder = (TimerService.RunServiceBinder) service;
+            mTimerService = binder.getService();
 
-            if (intent == null) return;
-            String action = intent.getAction();
+            Log.d(TAG, "This is timer service: "+mTimerService.toString());
+
+            if (null == mTimerService) return;
+
+            else Toast.makeText(mTimerService, "TimerServiceNotNull"+mTimerService.toString(), Toast.LENGTH_SHORT).show();
+
 
         }
-    };*/
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Log.d(TAG, "onServiceDisconnected");
+
+        }
+    };
 
 
     //onClick listItem handler
     @Override
     public void onListItemClicked(long workoutDate) {
-        Intent intent = new Intent(this,WorkoutActivity.class);
+        Intent intent = new Intent(this, WorkoutActivity.class);
         Uri uriForDateClicked = WorkoutContract.WorkoutEntry.buildWorkoutUriWithDate(workoutDate);
         intent.setData(uriForDateClicked);
         startActivity(intent);
@@ -126,13 +178,14 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
 
-        switch (id){
+        switch (id) {
             case ID_WORKOUT_LOADER: {
                 Uri workoutQueryUri = WorkoutContract.WorkoutEntry.CONTENT_URI;
                 String sortOrder = WorkoutContract.WorkoutEntry.COLUMN_DATE + " ASC";
-                return new CursorLoader(this,workoutQueryUri, WorkoutDBHelper.WORKOUT_PROJECTION,null,null,sortOrder);
+                return new CursorLoader(this, workoutQueryUri, WorkoutDBHelper.WORKOUT_PROJECTION, null, null, sortOrder);
             }
-            default: throw new RuntimeException("Loader Not Implemented");
+            default:
+                throw new RuntimeException("Loader Not Implemented");
         }
     }
 
@@ -150,19 +203,19 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     //onClick Floating Action Button
     public void addWorkout(View view) {
+
         showWorkoutAddDialog(0);
     }
 
-    public void showWorkoutAddDialog(long date){
+    public void showWorkoutAddDialog(long date) {
 
         AddWorkoutDialog addWorkoutDialog = new AddWorkoutDialog();
 
         Bundle b = new Bundle();
-        if(date!= 0) {
-            b.putLong("Date",date);
+        if (date != 0) {
+            b.putLong("Date", date);
             addWorkoutDialog.setArguments(b);
-        }
-        else addWorkoutDialog.setArguments(null);
+        } else addWorkoutDialog.setArguments(null);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -181,14 +234,15 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         super.onBackPressed();
         mRecyclerView.setVisibility(View.VISIBLE);
         mFloatingActionButtonAdd.show();
-        }
+
+    }
 
 
     //Button cancel clicked in AddWorkoutFragment callback
     @Override
     public void onButtonCancelClicked() {
-       mFloatingActionButtonAdd.show();
-       mRecyclerView.setVisibility(View.VISIBLE);
+        mFloatingActionButtonAdd.show();
+        mRecyclerView.setVisibility(View.VISIBLE);
 
     }
 
@@ -201,7 +255,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
 
     //is it really need?
-    private class VerticalSpaceItemDecoration extends RecyclerView.ItemDecoration{
+    private class VerticalSpaceItemDecoration extends RecyclerView.ItemDecoration {
 
         private final int mVerticalSpaceHeight;
 

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,8 @@ import com.tubb.smrv.SwipeHorizontalMenuLayout;
 
 
 class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterViewHolder>  {
+
+    public static final String TAG = WorkoutAdapter.class.getSimpleName();
 
     private Context mContext;
     private Cursor mCursor;
@@ -74,7 +77,13 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         holder.workoutTimeTextView.setText(workoutTime);
         holder.restTimeTextView.setText(restTime);
         holder.roundsTextView.setText(String.valueOf(numRounds));
+       // holder.playImageView.setVisibility(View.VISIBLE);
+
+
+
     }
+
+
 
     //get Item count
     @Override
@@ -85,8 +94,22 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         return mCursor.getCount();
     }
 
+    @Override
+    public void onViewAttachedToWindow(WorkoutAdapterViewHolder holder) {
+        super.onViewAttachedToWindow(holder);
+    }
+
+    public void showArrowVisible(int position,WorkoutAdapterViewHolder vh){
+        if (position==vh.getAdapterPosition())
+        {
+            vh.playImageView.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+
     //Workout ViewHolder implementation
-    class WorkoutAdapterViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
+    class WorkoutAdapterViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
 
         final TextView workoutNameTextView;
         final TextView workoutTimeTextView;
@@ -121,6 +144,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
 
             playImageView = (ImageView)view.findViewById(R.id.playImageView);
 
+
             setsTitleTextView.setText(R.string.sets_title);
             workoutTitleTextView.setText(R.string.workout_list_title);
             restTitleTextView.setText(R.string.rest_list_title);
@@ -136,9 +160,10 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             contentView.setOnClickListener(this);
             deleteImageView.setOnClickListener(this);
             editImageButton.setOnClickListener(this);
-
-
         }
+
+
+
 
         //On click handler
         @Override

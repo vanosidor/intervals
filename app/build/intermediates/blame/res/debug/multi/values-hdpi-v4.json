@@ -24,31 +24,5 @@
                 }
             }
         ]
-    },
-    {
-        "outputFile": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 6,
-                    "endColumn": 13,
-                    "endOffset": 327
-                },
-                "from": {
-                    "file": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 6,
-                        "endColumn": 13,
-                        "endOffset": 327
-                    }
-                }
-            }
-        ]
     }
 ]

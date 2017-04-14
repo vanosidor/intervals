@@ -1,19 +1,11 @@
 [
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\stop.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\stop.png"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\timer.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\timer.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_timer_black_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-mdpi\\ic_timer_black_24dp.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_close_black_24dp.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-mdpi\\ic_close_black_24dp.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_close_black_24dp.png",
@@ -28,28 +20,12 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-mdpi\\ic_play_green.png"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\timer.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\timer.png"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\border_color.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\border_color.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\stop.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\stop.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_timer_black_24dp.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-mdpi\\ic_timer_black_24dp.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\close.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\close.png"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_stop_black_24dp.png",
-        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-mdpi\\ic_stop_black_24dp.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_add_white_24dp.png",
@@ -60,11 +36,11 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\delete.png"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\close.png",
-        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\close.png"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_delete_white_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-mdpi\\ic_delete_white_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\close.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\close.png"
     }
 ]

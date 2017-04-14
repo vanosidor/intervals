@@ -63,7 +63,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.v(TAG, "OnCreate");
+        Log.d(TAG, "OnCreate");
         setContentView(R.layout.activity_workout);
 
         mStartButton = (Button) findViewById(R.id.startButton);
@@ -97,7 +97,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     @Override
     protected void onStart() {
         super.onStart();
-        Log.v(TAG, "onStart");
+        Log.d(TAG, "onStart");
 
         /*Start and bind service */
         Intent i = new Intent(this, TimerService.class);
@@ -111,7 +111,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     @Override
     protected void onStop() {
         super.onStop();
-        Log.v(TAG, "OnStop");
+        Log.d(TAG, "OnStop");
         //updateUIStopRun();
         if (mServiceIsBound) {
 
@@ -132,7 +132,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     protected void onPause() {
         super.onPause();
         unregisterReceiver(broadcastReceiver);
-        Log.v(TAG, "onPause");
+        Log.d(TAG, "onPause");
     }
 
     @Override
@@ -143,7 +143,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_WORKOUT_FINISH));
         registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_REST_FINISH));
         registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_FINISH_ALL));
-        Log.v(TAG, "onResume");
+        Log.d(TAG, "onResume");
     }
 
 
@@ -207,10 +207,12 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
 
         @Override
         public void onServiceConnected(ComponentName className, IBinder service) {
-            Log.v(TAG, "Service bound");
+            Log.d(TAG, "On service connected");
 
             TimerService.RunServiceBinder binder = (TimerService.RunServiceBinder) service;
             mTimerService = binder.getService();
+
+            Log.d(TAG,mTimerService.toString());
 
             if (null == mTimerService) return;
 
@@ -234,9 +236,9 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                Log.v(TAG, "Service disconnect");
-            }
+
+                Log.d(TAG, "Service disconnect");
+
             mServiceIsBound = false;
         }
     };
@@ -245,7 +247,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
    * On Button start clicked
    * */
     public void startTimer(View view) {
-        Log.v(TAG, "Starting and binding service: " + mUri);
+        Log.d(TAG, "Start button clicked: " + mUri);
 
         if (mServiceIsBound) {
             //if click start when another timer is running
@@ -262,6 +264,7 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     *On Button stop clicked
     **/
     public void stopTimer(View view){
+        Log.d(TAG, "Stop button clicked: " + mUri);
         if (mServiceIsBound && mTimerService.isTimerRunning()) {
             mTimerService.stopTimer();
             updateUIStopRun();
