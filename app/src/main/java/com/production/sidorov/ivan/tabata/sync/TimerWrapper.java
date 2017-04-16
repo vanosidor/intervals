@@ -140,5 +140,8 @@ public class TimerWrapper {
         roundCounter = 0;
         mWorkoutTicker.cancel();
         mRestTicker.cancel();
+
+        Intent intentFinishAll = new Intent(BROADCAST_FINISH_ALL);
+        mContext.sendBroadcast(intentFinishAll);
     }
 }

@@ -1,7 +1,19 @@
 [
     {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\border_color.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\border_color.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_timer_black_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_timer_black_24dp.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\timer.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\timer.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\delete.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\delete.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\delete.png",
@@ -12,12 +24,28 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\stop.png"
     },
     {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\timer.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\timer.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\close.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\close.png"
     },
     {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_delete_white_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_delete_white_24dp.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_timer_black_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_timer_black_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_play_green.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_play_green.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_add_white_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_add_white_24dp.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_play_green.png",
@@ -28,8 +56,24 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\border_color.png"
     },
     {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_close_black_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_close_black_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stop.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\stop.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_close_black_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_close_black_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\close.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\close.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_edit_color_white_24dp.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_edit_color_white_24dp.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_delete_white_24dp.png",

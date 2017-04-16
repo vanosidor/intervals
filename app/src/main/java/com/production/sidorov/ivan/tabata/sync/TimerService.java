@@ -30,7 +30,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Иван on 09.03.2017.
  */
 
-public class TimerService extends Service implements TimerWrapper.TimerCallbacks {
+public class TimerService extends Service implements TimerWrapper.TimerCallbacks{
     private static final String TAG = TimerService.class.getSimpleName();
 
     private final String[] mProjection = {
@@ -67,20 +67,27 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
 
     long mDate;
 
+
+   /* public interface OnStartTimer {
+       void startingTimer(long date);
+    }*/
+
+   // OnStartTimer mOnStartTimer;
+
     @Override
     public void onCreate() {
         Log.d(TAG, "Service onCreate");
 
         isTimerRunning = false;
 
-        Observable<Long> startTimerObservable = createStartTimerObservable();
+        /*Observable<Long> startTimerObservable = createStartTimerObservable();
 
         startTimerObservable.subscribe(new Consumer<Long>() {
             @Override
             public void accept(Long aLong) throws Exception {
                 Log.d(TAG, "accept: " + aLong);
             }
-        });
+        });*/
 
 
     }
@@ -183,6 +190,8 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
 
         mTimerWrapper.startTimer();
 
+        //mOnStartTimer.startingTimer(mDate);
+
         isTimerRunning = true;
 
        /* Intent intent = new Intent(BROADCAST_START_TIMER_IN_SERVICE);
@@ -210,7 +219,7 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
     public void stopTimer() {
         Log.d(TAG, "Service stop timer");
         mTimerWrapper.stopTimer();
-
+        isTimerRunning = false;
     }
 
     /**
@@ -246,10 +255,12 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
         return isUriMatches;
     }
 
-    public Observable<Long> createStartTimerObservable() {
+    /*public Observable<Long> createStartTimerObservable() {
         return Observable.create(new ObservableOnSubscribe<Long>() {
             @Override
             public void subscribe(final ObservableEmitter<Long> emitter) throws Exception {
+
+
 
                 emitter.onNext(mDate);
 
@@ -263,7 +274,9 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
 
             }
         });
+    }*/
+
+    public long getDate() {
+        return mDate;
     }
-
-
 }

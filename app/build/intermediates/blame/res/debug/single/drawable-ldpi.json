@@ -1,7 +1,15 @@
 [
     {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\stop.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\stop.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\delete.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\delete.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\timer.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\timer.png"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\close.png",
@@ -18,5 +26,17 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\timer.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\timer.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\close.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\close.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\delete.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\delete.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\border_color.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\border_color.png"
     }
 ]

@@ -2,5 +2,9 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

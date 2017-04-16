@@ -22,6 +22,8 @@ import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 import com.tubb.smrv.SwipeHorizontalMenuLayout;
 
 
+
+
 /**
  * Created by Иван on 06.03.2017.
  */
@@ -42,7 +44,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
     //Callback interface for main activity event handlers
     public interface WorkoutAdapterOnClickHandler {
         //method callback for click item
-        void onListItemClicked(long workoutDate);
+        void onListItemClicked(long workoutDate,int adapterPosition);
         //method callback for click edit
         void onEditItemClicked(long workoutDate);
     }
@@ -160,6 +162,8 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             contentView.setOnClickListener(this);
             deleteImageView.setOnClickListener(this);
             editImageButton.setOnClickListener(this);
+
+
         }
 
 
@@ -211,7 +215,9 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
                 }
                 //Content View clicked
                 case R.id.smContentView:{
-                    mWorkoutAdapterClickedHandler.onListItemClicked(workoutDate);
+
+                    mWorkoutAdapterClickedHandler.onListItemClicked(workoutDate,getAdapterPosition());
+
                     break;
                 }
 
@@ -242,6 +248,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         mCursor = newCursor;
         notifyDataSetChanged();
     }
+
 
 
 }

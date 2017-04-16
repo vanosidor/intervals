@@ -7,13 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.RectF;
 import android.net.Uri;
 import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
@@ -26,7 +20,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -54,8 +47,13 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     public static final int ID_WORKOUT_LOADER = 33;
 
+    private int mAdapterPosition;
 
     TimerService mTimerService;
+
+    LinearLayoutManager mLayoutManager;
+
+    long mWorkoutDateTag;
 
 
     @Override
@@ -66,26 +64,9 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
         mRecyclerView = (SwipeMenuRecyclerView) findViewById(R.id.rv_workout);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
-                super.onLayoutChildren(recycler, state);
-                /*set green arrow*/
-                Log.d(TAG, "onLayoutChildren");
-                View childView = this.findViewByPosition(1);
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
-                if (childView != null) {
-
-                    findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
-
-                }
-
-            }
-        };
-
-  //      mWorkoutAdapter.getPositionById(3);
-
-        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
         mRecyclerView.setHasFixedSize(true);
 
@@ -109,9 +90,6 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
         /*insert fake data*/
         // FakeDataUtils.insertFakeData(this);
-
-
-
     }
 
 
@@ -123,6 +101,32 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         Intent i = new Intent(this, TimerService.class);
         bindService(i, mConnection, 0);
         Log.d(TAG, "Bind service");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_FINISH_ALL));
+    }
+
+    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            /*If uri clicked matches with current uri update UI */
+            Toast.makeText(context, "Finish workout", Toast.LENGTH_SHORT).show();
+            mRecyclerView.findViewWithTag(mWorkoutDateTag).findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+        }
+    };
+
+    @Override
+    public void unregisterReceiver(BroadcastReceiver receiver) {
+        super.unregisterReceiver(receiver);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(broadcastReceiver);
     }
 
     @Override
@@ -139,29 +143,41 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         @Override
         public void onServiceConnected(ComponentName className, IBinder service) {
             Log.d(TAG, "onServiceConnected");
+
             TimerService.RunServiceBinder binder = (TimerService.RunServiceBinder) service;
             mTimerService = binder.getService();
 
-            Log.d(TAG, "This is timer service: "+mTimerService.toString());
+            Log.d(TAG, "This is timer service: " + mTimerService.toString());
 
             if (null == mTimerService) return;
 
-            else Toast.makeText(mTimerService, "TimerServiceNotNull"+mTimerService.toString(), Toast.LENGTH_SHORT).show();
-
-
+            //remove previous visible arrow if exists
+            if (mWorkoutDateTag != 0) {
+                View contentView = mRecyclerView.findViewWithTag(mWorkoutDateTag);
+                if(contentView!=null) contentView.findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+            }
+            //show visible arrow
+            if (mTimerService.isTimerRunning()) {
+                mWorkoutDateTag = mTimerService.getDate();
+                //set green arrow for current workout
+                View contentView = mRecyclerView.findViewWithTag(mWorkoutDateTag);
+                if(contentView!=null)contentView.findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
+            }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
             Log.d(TAG, "onServiceDisconnected");
-
         }
     };
 
 
     //onClick listItem handler
     @Override
-    public void onListItemClicked(long workoutDate) {
+    public void onListItemClicked(long workoutDate, int adapterPosition) {
+
+        mAdapterPosition = adapterPosition;
+
         Intent intent = new Intent(this, WorkoutActivity.class);
         Uri uriForDateClicked = WorkoutContract.WorkoutEntry.buildWorkoutUriWithDate(workoutDate);
         intent.setData(uriForDateClicked);
