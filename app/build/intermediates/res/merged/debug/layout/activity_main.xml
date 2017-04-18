@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.production.sidorov.ivan.tabata.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
-        android:id="@+id/fragmentContainerFrameLayout"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:context="com.production.sidorov.ivan.tabata.MainActivity">
 
-    <com.tubb.smrv.SwipeMenuRecyclerView
-        android:id="@+id/rv_workout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/fragmentContainerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.tubb.smrv.SwipeMenuRecyclerView
+            android:id="@+id/workoutRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabAddWorkout"
-        android:onClick="addWorkout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        app:layout_anchorGravity="bottom|right|end"
-        app:layout_anchor="@id/rv_workout"
-        android:layout_marginRight="15dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_add_white_24dp"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addWorkoutFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="15dp"
+            android:onClick="addWorkout"
+            android:src="@drawable/ic_add_white_24dp"
+            app:layout_anchor="@id/workoutRecyclerView"
+            app:layout_anchorGravity="bottom|right|end" />
 
-</android.support.design.widget.CoordinatorLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.database.Cursor;
+import android.databinding.DataBindingUtil;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.IBinder;
@@ -27,6 +28,7 @@ import android.widget.Toast;
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
+import com.production.sidorov.ivan.tabata.databinding.ActivityMainBinding;
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
 import com.production.sidorov.ivan.tabata.sync.TimerService;
 import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
@@ -37,17 +39,14 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         AddWorkoutDialog.OnFragmentButtonsClickListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
-    public static final String WORKOUT_DATA = "workout_data";
 
-    private com.tubb.smrv.SwipeMenuRecyclerView mRecyclerView;
+    private ActivityMainBinding mBinding;
+
     private WorkoutAdapter mWorkoutAdapter;
-    private FloatingActionButton mFloatingActionButtonAdd;
 
     private int mPosition = RecyclerView.NO_POSITION;
 
     public static final int ID_WORKOUT_LOADER = 33;
-
-    private int mAdapterPosition;
 
     TimerService mTimerService;
 
@@ -55,30 +54,26 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     long mWorkoutDateTag;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "Create");
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = (SwipeMenuRecyclerView) findViewById(R.id.rv_workout);
+        mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        mBinding.workoutRecyclerView.setLayoutManager(mLayoutManager);
 
-        mRecyclerView.setHasFixedSize(true);
+        mBinding.workoutRecyclerView.setHasFixedSize(true);
 
         mWorkoutAdapter = new WorkoutAdapter(this, this);
 
-        mRecyclerView.setAdapter(mWorkoutAdapter);
+        mBinding.workoutRecyclerView.setAdapter(mWorkoutAdapter);
 
 
-        mRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(3));
-
-        mFloatingActionButtonAdd = (FloatingActionButton) findViewById(R.id.fabAddWorkout);
-
+        mBinding.workoutRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(3));
 
         getSupportLoaderManager().initLoader(ID_WORKOUT_LOADER, null, this);
 
@@ -91,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         /*insert fake data*/
         // FakeDataUtils.insertFakeData(this);
     }
-
 
     @Override
     protected void onStart() {
@@ -114,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         public void onReceive(Context context, Intent intent) {
             /*If uri clicked matches with current uri update UI */
             Toast.makeText(context, "Finish workout", Toast.LENGTH_SHORT).show();
-            mRecyclerView.findViewWithTag(mWorkoutDateTag).findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+            mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag).findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
         }
     };
 
@@ -153,14 +147,14 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
             //remove previous visible arrow if exists
             if (mWorkoutDateTag != 0) {
-                View contentView = mRecyclerView.findViewWithTag(mWorkoutDateTag);
+                View contentView = mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
                 if(contentView!=null) contentView.findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
             }
             //show visible arrow
             if (mTimerService.isTimerRunning()) {
                 mWorkoutDateTag = mTimerService.getDate();
                 //set green arrow for current workout
-                View contentView = mRecyclerView.findViewWithTag(mWorkoutDateTag);
+                View contentView = mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
                 if(contentView!=null)contentView.findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
             }
         }
@@ -175,8 +169,6 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     //onClick listItem handler
     @Override
     public void onListItemClicked(long workoutDate, int adapterPosition) {
-
-        mAdapterPosition = adapterPosition;
 
         Intent intent = new Intent(this, WorkoutActivity.class);
         Uri uriForDateClicked = WorkoutContract.WorkoutEntry.buildWorkoutUriWithDate(workoutDate);
@@ -209,7 +201,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         mWorkoutAdapter.swapCursor(data);
         if (mPosition == RecyclerView.NO_POSITION) mPosition = 0;
-        mRecyclerView.smoothScrollToPosition(mPosition);
+        mBinding.workoutRecyclerView.smoothScrollToPosition(mPosition);
     }
 
     @Override
@@ -237,36 +229,36 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.fragmentContainerFrameLayout, addWorkoutDialog);
+
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
-        mFloatingActionButtonAdd.hide();
-        mRecyclerView.setVisibility(View.GONE);
+        mBinding.addWorkoutFab.hide();
+        mBinding.workoutRecyclerView.setVisibility(View.GONE);
     }
 
     //On back pressed
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        mRecyclerView.setVisibility(View.VISIBLE);
-        mFloatingActionButtonAdd.show();
-
+        mBinding.workoutRecyclerView.setVisibility(View.VISIBLE);
+        mBinding.addWorkoutFab.show();
     }
 
 
     //Button cancel clicked in AddWorkoutFragment callback
     @Override
     public void onButtonCancelClicked() {
-        mFloatingActionButtonAdd.show();
-        mRecyclerView.setVisibility(View.VISIBLE);
+        mBinding.addWorkoutFab.show();
+        mBinding.workoutRecyclerView.setVisibility(View.VISIBLE);
 
     }
 
     //Button Ok clicked in AddWorkoutFragment callback
     @Override
     public void onButtonOkClicked() {
-        mFloatingActionButtonAdd.show();
-        mRecyclerView.setVisibility(View.VISIBLE);
+        mBinding.addWorkoutFab.show();
+        mBinding.workoutRecyclerView.setVisibility(View.VISIBLE);
     }
 
 
@@ -284,7 +276,6 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
                                    RecyclerView.State state) {
             outRect.bottom = mVerticalSpaceHeight;
         }
-
     }
 
 }

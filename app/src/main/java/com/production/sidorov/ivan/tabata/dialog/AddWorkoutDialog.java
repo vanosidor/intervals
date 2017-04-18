@@ -3,6 +3,8 @@ package com.production.sidorov.ivan.tabata.dialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.databinding.DataBindingComponent;
+import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -25,6 +27,7 @@ import com.codetroopers.betterpickers.hmspicker.HmsPickerDialogFragment;
 import com.production.sidorov.ivan.tabata.R;
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
+import com.production.sidorov.ivan.tabata.databinding.AddWorkoutFragmentBinding;
 
 /**
  * Created by Иван on 21.03.2017.
@@ -32,24 +35,11 @@ import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 public class AddWorkoutDialog extends Fragment implements View.OnClickListener, HmsPickerDialogFragment.HmsPickerDialogHandlerV2, SeekBar.OnSeekBarChangeListener{
 
+    AddWorkoutFragmentBinding mBinding;
+
     public static final String TAG = AddWorkoutDialog.class.getSimpleName();
     private static final int INPUT_WORKOUT_TIME_REFERENCE = 0 ;
     private static final int INPUT_REST_TIME_REFERENCE = 1 ;
-
-    private Button mOkButton;
-    private Button mCancelButton;
-
-    private SeekBar mRoundsSeekBar;
-    //private TextInputLayout mWorkoutTitleTextInputLayout;
-    private EditText mWorkoutTitleEditText;
-
-    private TextView mWorkoutTitleTextView;
-    private TextView mWorkoutTimeTitleTextView;
-    private TextView mRestTimeTitleTextView;
-    private TextView mInputWorkoutTimeTextView;
-    private TextView mInputRestTimeTextView;
-    private TextView mRoundsTitleTextView;
-    private TextView mNumRoundsTextView;
 
     long mDate;
     private boolean isEdit;
@@ -58,28 +48,15 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.add_workout_fragment,container,false);
+
+        mBinding = DataBindingUtil.inflate(inflater,R.layout.add_workout_fragment,container,false);
+
+        View rootView = mBinding.getRoot();
 
         Bundle arguments = getArguments();
 
-        mOkButton = (Button)rootView.findViewById(R.id.okButton);
-        mCancelButton = (Button)rootView.findViewById(R.id.cancelButton);
-
-        mOkButton.setText(R.string.btn_ok);
-        mCancelButton.setText(R.string.btn_cancel);
-
-        mRoundsSeekBar = (SeekBar)rootView.findViewById(R.id.roundsSeekBar);
-        //mWorkoutTitleTextInputLayout = (TextInputLayout)rootView.findViewById(R.id.intervalTitleTextInputLayout);
-        mWorkoutTitleEditText = (EditText)rootView.findViewById(R.id.intervalTitleEditText);
-
-        mWorkoutTitleTextView = (TextView)rootView.findViewById(R.id.workoutTitleTextView);
-        mWorkoutTimeTitleTextView = (TextView)rootView.findViewById(R.id.workoutTimeTitleTextView);
-        mRestTimeTitleTextView = (TextView)rootView.findViewById(R.id.restTimeTitleTextView);
-        mRoundsTitleTextView = (TextView)rootView.findViewById(R.id.roundsTitleTextView);
-
-        mInputWorkoutTimeTextView = (TextView)rootView.findViewById(R.id.inputWorkoutTimeTextView);
-        mInputRestTimeTextView = (TextView)rootView.findViewById(R.id.inputRestTimeTextView);
-        mNumRoundsTextView = (TextView)rootView.findViewById(R.id.numRoundsTextView);
+        mBinding.okButton.setText(R.string.btn_ok);
+        mBinding.cancelButton.setText(R.string.btn_cancel);
 
         //Set text for static views
         if(arguments!=null)
@@ -101,33 +78,37 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
                 String restTime = c.getString(WorkoutDBHelper.INDEX_REST_TIME);
                 int rounds = c.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
 
-                mInputWorkoutTimeTextView.setText(workoutTime);
-                mInputRestTimeTextView.setText(restTime);
-                mWorkoutTitleEditText.setText(name);
-                mNumRoundsTextView.setText(String.valueOf(rounds));
+                mBinding.inputWorkoutTimeTextView.setText(workoutTime);
+                mBinding.inputRestTimeTextView.setText(restTime);
+                mBinding.workoutTitleEditText.setText(name);
+                mBinding.numRoundsTextView.setText(String.valueOf(rounds));
             }
 
         }
         else {
-            mInputWorkoutTimeTextView.setText(R.string.time_default);
-            mInputRestTimeTextView.setText(R.string.time_default);
-            mNumRoundsTextView.setText("1");
+            mBinding.inputWorkoutTimeTextView.setText(R.string.time_default);
+            mBinding.inputRestTimeTextView.setText(R.string.time_default);
+            mBinding.numRoundsTextView.setText("1");
         }
 
-        mWorkoutTitleTextView.setText(R.string.workout_title);
-        mWorkoutTimeTitleTextView.setText(R.string.workout_time_title);
-        mRestTimeTitleTextView.setText(R.string.rest_time_title);
-        mRoundsTitleTextView.setText(R.string.rounds_title);
+        mBinding.workoutTitleTextView.setText(R.string.workout_title);
+        //mWorkoutTimeTitleTextView.setText(R.string.workout_time_title);
+        mBinding.workoutTimeTitleTextView.setText(R.string.workout_time_title);
+
+        mBinding.restTimeTitleTextView.setText(R.string.rest_time_title);
+        mBinding.roundsTitleTextView.setText(R.string.rounds_title);
 
 
         //Set onClick Listeners
-        mOkButton.setOnClickListener(this);
-        mCancelButton.setOnClickListener(this);
-        mInputWorkoutTimeTextView.setOnClickListener(this);
-        mInputRestTimeTextView.setOnClickListener(this);
+        //mOkButton.setOnClickListener(this);
+        mBinding.okButton.setOnClickListener(this);
+
+        mBinding.cancelButton.setOnClickListener(this);
+        mBinding.inputWorkoutTimeTextView.setOnClickListener(this);
+        mBinding.inputRestTimeTextView.setOnClickListener(this);
 
         //Set onSeekBarChangeListener
-        mRoundsSeekBar.setOnSeekBarChangeListener(this);
+        mBinding.roundsSeekBar.setOnSeekBarChangeListener(this);
 
         return rootView;
     }
@@ -150,13 +131,13 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
     public void onDialogHmsSet(int reference, boolean isNegative, int hours, int minutes, int seconds) {
         if(reference==INPUT_WORKOUT_TIME_REFERENCE)
         {
-            if(hours>0) mInputWorkoutTimeTextView.setText(getString(R.string.format_time_with_hours,hours,minutes,seconds));
-            else mInputWorkoutTimeTextView.setText(getString(R.string.format_time,minutes,seconds));
+            if(hours>0) mBinding.inputWorkoutTimeTextView.setText(getString(R.string.format_time_with_hours,hours,minutes,seconds));
+            else mBinding.inputWorkoutTimeTextView.setText(getString(R.string.format_time,minutes,seconds));
         }
         else
         {
-            if(hours>0) mInputRestTimeTextView.setText(getString(R.string.format_time_with_hours,hours,minutes,seconds));
-            else mInputRestTimeTextView.setText(getString(R.string.format_time,minutes,seconds));
+            if(hours>0) mBinding.inputRestTimeTextView.setText(getString(R.string.format_time_with_hours,hours,minutes,seconds));
+            else mBinding.inputRestTimeTextView.setText(getString(R.string.format_time,minutes,seconds));
         }
     }
 
@@ -164,11 +145,11 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
     //SeekBarChangeListener callback
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-        if(mRoundsSeekBar.getProgress() == 0 )
+        if(mBinding.roundsSeekBar.getProgress() == 0 )
         {
             seekBar.setProgress(1);
         }
-        mNumRoundsTextView.setText(String.valueOf(seekBar.getProgress()));
+        mBinding.numRoundsTextView.setText(String.valueOf(seekBar.getProgress()));
     }
 
     @Override
@@ -210,18 +191,18 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
 
                 long date;
 
-                if(mWorkoutTitleEditText.getText().toString().trim().length() == 0
-                        || mInputWorkoutTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))
-                        || mInputRestTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))) {
+                if(mBinding.workoutTitleEditText.getText().toString().trim().length() == 0
+                        || mBinding.inputWorkoutTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))
+                        || mBinding.inputRestTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))) {
                     Toast.makeText(getActivity(),"Please, enter workout data!",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
 
-                String title = String.valueOf(mWorkoutTitleEditText.getText());
-                String workoutTime = String.valueOf(mInputWorkoutTimeTextView.getText());
-                String restTime = String.valueOf(mInputWorkoutTimeTextView.getText());
-                int rounds = mRoundsSeekBar.getProgress();
+                String title = String.valueOf(mBinding.workoutTitleEditText.getText());
+                String workoutTime = String.valueOf(mBinding.inputWorkoutTimeTextView.getText());
+                String restTime = String.valueOf(mBinding.inputWorkoutTimeTextView.getText());
+                int rounds = mBinding.roundsSeekBar.getProgress();
 
                 ContentValues contentValues = new ContentValues();
 

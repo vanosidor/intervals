@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.database.Cursor;
+import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -23,6 +24,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
+import com.production.sidorov.ivan.tabata.databinding.ActivityWorkoutBinding;
 import com.production.sidorov.ivan.tabata.sync.TimerService;
 import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
 import com.production.sidorov.ivan.tabata.utilitis.WorkoutTimeUtils;
@@ -33,6 +35,7 @@ import com.production.sidorov.ivan.tabata.utilitis.WorkoutTimeUtils;
 
 public class WorkoutActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
+    ActivityWorkoutBinding mBinding;
 
     private Uri mUri;
 
@@ -47,15 +50,17 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     String mRestTime;
     private int mRounds;
 
+
+
     //UI
-    private TextView mWorkoutNameTextView;
-    private TextView mTimeTextView;
-    private TextView mWorkoutTypeTextView;
-    private HoloCircularProgressBar mProgressBar;
-    private TextView mRoundsTitleTextView;
-    private TextView mCurrentRoundTextView;
-    private Button mStartButton;
-    private Button mStopButton;
+    //private TextView mWorkoutNameTextView;
+    //private TextView mTimeTextView;
+    //private TextView mWorkoutTypeTextView;
+    //private HoloCircularProgressBar mProgressBar;
+    //private TextView mRoundsTitleTextView;
+    //private TextView mCurrentRoundTextView;
+    //private Button mStartButton;
+   // private Button mStopButton;
 
     private ObjectAnimator mProgressBarAnimator;
 
@@ -65,24 +70,25 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
 
         Log.d(TAG, "OnCreate");
         setContentView(R.layout.activity_workout);
+        mBinding= DataBindingUtil.setContentView(this,R.layout.activity_workout);
 
-        mStartButton = (Button) findViewById(R.id.startButton);
-        mStopButton = (Button) findViewById(R.id.stopButton);
+        //mStartButton = (Button) findViewById(R.id.startButton);
+        //mStopButton = (Button) findViewById(R.id.stopButton);
 
-        mProgressBar = (HoloCircularProgressBar) findViewById(R.id.holoCircularProgressBar);
+        //mProgressBar = (HoloCircularProgressBar) findViewById(R.id.holoCircularProgressBar);
 
-        mWorkoutNameTextView = (TextView) findViewById(R.id.workoutNameTextView);
-        mTimeTextView = (TextView) findViewById(R.id.timeTextView);
-        mWorkoutTypeTextView = (TextView) findViewById(R.id.workoutTypeTextView);
-        mRoundsTitleTextView = (TextView) findViewById(R.id.roundsTitleTextView);
-        mCurrentRoundTextView = (TextView) findViewById(R.id.currentRoundTextView);
+        //mWorkoutNameTextView = (TextView) findViewById(R.id.workoutNameTextView);
+        //mTimeTextView = (TextView) findViewById(R.id.timeTextView);
+        //mWorkoutTypeTextView = (TextView) findViewById(R.id.workoutTypeTextView);
+        //mRoundsTitleTextView = (TextView) findViewById(R.id.roundsTitleTextView);
+        //mCurrentRoundTextView = (TextView) findViewById(R.id.currentRoundTextView);
 
-        mTimeTextView.setText(R.string.time_default);
-        mRoundsTitleTextView.setText(R.string.round_title);
-        mStartButton.setText(R.string.timer_start);
-        mStopButton.setText(R.string.timer_cancel);
+        mBinding.timeTextView.setText(R.string.time_default);
+        mBinding.roundsTitleTextView.setText(R.string.round_title);
+        mBinding.startButton.setText(R.string.timer_start);
+        mBinding.stopButton.setText(R.string.timer_cancel);
 
-        mStopButton.setEnabled(false);
+        mBinding.stopButton.setEnabled(false);
 
         mUri = getIntent().getData();
 
@@ -191,8 +197,10 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         mWorkoutTime = data.getString(WorkoutDBHelper.INDEX_WORKOUT_TIME);
         mRestTime = data.getString(WorkoutDBHelper.INDEX_REST_TIME);
         mRounds = data.getInt(WorkoutDBHelper.INDEX_ROUNDS_NUM);
-        mWorkoutNameTextView.setText(name);
-        mCurrentRoundTextView.setText(getString(R.string.format_rounds, mRounds));
+        //mWorkoutNameTextView.setText(name);
+        mBinding.workoutNameTextView.setText(name);
+
+        mBinding.currentRoundTextView.setText(getString(R.string.format_rounds, mRounds));
     }
 
     @Override
@@ -276,13 +284,13 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
      */
     private void updateUIStartRun() {
         Log.d(TAG, "Update UIStartRun");
-        mStartButton.setEnabled(false);
-        mStopButton.setEnabled(true);
-        mWorkoutTypeTextView.setText(R.string.workout_text);
-        mCurrentRoundTextView.setText(getString(R.string.format_rounds, mRounds));
+        mBinding.startButton.setEnabled(false);
+        mBinding.stopButton.setEnabled(true);
+        mBinding.workoutTypeTextView.setText(R.string.workout_text);
+        mBinding.currentRoundTextView.setText(getString(R.string.format_rounds, mRounds));
 
-        mProgressBar.setProgress(0.0f);
-        animateProgressBar(mProgressBar,1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mWorkoutTime));
+        mBinding.holoCircularProgressBar.setProgress(0.0f);
+        animateProgressBar(mBinding.holoCircularProgressBar,1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mWorkoutTime));
     }
 
     /**
@@ -291,17 +299,17 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     private void updateUIStopRun() {
         Log.d(TAG, "Update UIStopRun");
 
-        mStartButton.setEnabled(true);
-        mStopButton.setEnabled(false);
-        mWorkoutTypeTextView.setText("");
+        mBinding.startButton.setEnabled(true);
+        mBinding.stopButton.setEnabled(false);
+        mBinding.workoutTypeTextView.setText("");
 
         if (mProgressBarAnimator != null) {
             mProgressBarAnimator.cancel();
         }
 
-        mProgressBar.setProgress(0.0f);
+        mBinding.holoCircularProgressBar.setProgress(0.0f);
 
-        mCurrentRoundTextView.setText(getString(R.string.format_rounds, mRounds));
+        mBinding.currentRoundTextView.setText(getString(R.string.format_rounds, mRounds));
     }
 
     /*
@@ -313,42 +321,42 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         switch (action) {
             case TimerWrapper.BROADCAST_WORKOUT_TICK: {
                 long millisUntilFinished = intent.getLongExtra(TimerWrapper.INTENT_WORKOUT_EXTRA, 0);
-                mTimeTextView.setText(WorkoutTimeUtils.timeInMillisToString(millisUntilFinished));
+                mBinding.timeTextView.setText(WorkoutTimeUtils.timeInMillisToString(millisUntilFinished));
                 break;
             }
             case TimerWrapper.BROADCAST_REST_TICK: {
                 long millisUntilFinished = intent.getLongExtra(TimerWrapper.INTENT_REST_EXTRA, 0);
-                mTimeTextView.setText(WorkoutTimeUtils.timeInMillisToString(millisUntilFinished));
+                mBinding.timeTextView.setText(WorkoutTimeUtils.timeInMillisToString(millisUntilFinished));
                 break;
             }
             case TimerWrapper.BROADCAST_WORKOUT_FINISH: {
 
-                mProgressBar.setProgress(0.0f);
+                mBinding.holoCircularProgressBar.setProgress(0.0f);
                 //Animate ProgressBar rest when workout finished
-                animateProgressBar(mProgressBar, 1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mRestTime));
-                mWorkoutTypeTextView.setText(R.string.rest_text);
+                animateProgressBar(mBinding.holoCircularProgressBar, 1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mRestTime));
+                mBinding.workoutTypeTextView.setText(R.string.rest_text);
                 break;
             }
             case TimerWrapper.BROADCAST_REST_FINISH: {
                 if (intent.hasExtra(TimerWrapper.INTENT_CURRENT_ROUND_NUM_EXTRA)) {
                     int roundNumCurrent = intent.getIntExtra(TimerWrapper.INTENT_CURRENT_ROUND_NUM_EXTRA, 0);
                     if (roundNumCurrent < mRounds) {
-                        mCurrentRoundTextView.setText(getString(R.string.format_rounds_started, ++roundNumCurrent, mRounds));
-                        mProgressBar.setProgress(0.0f);
+                        mBinding.currentRoundTextView.setText(getString(R.string.format_rounds_started, ++roundNumCurrent, mRounds));
+                        mBinding.holoCircularProgressBar.setProgress(0.0f);
                         //Animate ProgressBar workout when rest finished if not end yet
-                        animateProgressBar(mProgressBar,1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mWorkoutTime));
+                        animateProgressBar(mBinding.holoCircularProgressBar,1.0f, (int) WorkoutTimeUtils.getTimeInMillis(mWorkoutTime));
                     }
                 }
-                mWorkoutTypeTextView.setText(R.string.workout_text);
+                mBinding.workoutTypeTextView.setText(R.string.workout_text);
                 break;
             }
             /*WorkoutTimer is finished work */
             case TimerWrapper.BROADCAST_FINISH_ALL: {
                 Log.d(TAG, "workout finished work");
 
-                mStartButton.setEnabled(true);
-                mStopButton.setEnabled(false);
-                mWorkoutTypeTextView.setText("");
+                mBinding.startButton.setEnabled(true);
+                mBinding.stopButton.setEnabled(false);
+                mBinding.workoutTypeTextView.setText("");
                 break;
             }
         }
@@ -360,8 +368,8 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     private void restoreUI(TimerService timerService) {
         Log.d(TAG, "restoreUI state");
 
-        mStartButton.setEnabled(false);
-        mStopButton.setEnabled(true);
+        mBinding.startButton.setEnabled(false);
+        mBinding.stopButton.setEnabled(true);
 
         /*get Workout Data about current Workout from TimerService*/
         long millisUntilFinished = timerService.getMillisUntilFinished();
@@ -375,15 +383,15 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         /*animate ProgressBar and setWorkoutType */
         if (state == TimerWrapper.STATE_WORKOUT) {
             progress = (float) (workoutTime-millisUntilFinished )/ workoutTime;
-            mWorkoutTypeTextView.setText(R.string.workout_text);
+            mBinding.workoutTypeTextView.setText(R.string.workout_text);
         } else {
             progress = (float) (restTime - millisUntilFinished) / restTime;
-            mWorkoutTypeTextView.setText(R.string.rest_text);
+            mBinding.workoutTypeTextView.setText(R.string.rest_text);
         }
 
-        mProgressBar.setProgress(progress);
+        mBinding.holoCircularProgressBar.setProgress(progress);
 
-        animateProgressBar(mProgressBar, 1.0f, (int) millisUntilFinished);
+        animateProgressBar(mBinding.holoCircularProgressBar, 1.0f, (int) millisUntilFinished);
     }
 
     /*
