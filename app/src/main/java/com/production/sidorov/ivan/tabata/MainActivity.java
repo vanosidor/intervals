@@ -11,7 +11,6 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.IBinder;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.LoaderManager;
@@ -32,7 +31,6 @@ import com.production.sidorov.ivan.tabata.databinding.ActivityMainBinding;
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
 import com.production.sidorov.ivan.tabata.sync.TimerService;
 import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
-import com.tubb.smrv.SwipeMenuRecyclerView;
 
 public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler,
         LoaderManager.LoaderCallbacks<Cursor>,
@@ -53,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     LinearLayoutManager mLayoutManager;
 
     long mWorkoutDateTag;
+
+    // visibility of workout dialog(need for re-orientation)
+    private static boolean sIsAddWorkoutVisible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +92,11 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     protected void onStart() {
         Log.d(TAG, "OnStart");
         super.onStart();
+
+        if(sIsAddWorkoutVisible){
+            mBinding.addWorkoutFab.hide();
+            mBinding.workoutRecyclerView.setVisibility(View.GONE);
+        }
 
         Intent i = new Intent(this, TimerService.class);
         bindService(i, mConnection, 0);
@@ -217,6 +223,8 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     public void showWorkoutAddDialog(long date) {
 
+        sIsAddWorkoutVisible = true;
+
         AddWorkoutDialog addWorkoutDialog = new AddWorkoutDialog();
 
         Bundle b = new Bundle();
@@ -240,6 +248,9 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     //On back pressed
     @Override
     public void onBackPressed() {
+
+        sIsAddWorkoutVisible = false;
+
         super.onBackPressed();
         mBinding.workoutRecyclerView.setVisibility(View.VISIBLE);
         mBinding.addWorkoutFab.show();
@@ -249,6 +260,10 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     //Button cancel clicked in AddWorkoutFragment callback
     @Override
     public void onButtonCancelClicked() {
+
+        sIsAddWorkoutVisible = false;
+
+
         mBinding.addWorkoutFab.show();
         mBinding.workoutRecyclerView.setVisibility(View.VISIBLE);
 
@@ -257,6 +272,9 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     //Button Ok clicked in AddWorkoutFragment callback
     @Override
     public void onButtonOkClicked() {
+
+        sIsAddWorkoutVisible = false;
+
         mBinding.addWorkoutFab.show();
         mBinding.workoutRecyclerView.setVisibility(View.VISIBLE);
     }
