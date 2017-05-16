@@ -92,16 +92,16 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\keyboard_text_with_header.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_date_picker_view_animator.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\calendar_date_picker_view_animator.xml"
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_date_picker_dialog.xml",
+        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\calendar_date_picker_dialog.xml"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\workout_list_item_right_menu.xml",
         "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\layout\\workout_list_item_right_menu.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_date_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\calendar_date_picker_dialog.xml"
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_date_picker_view_animator.xml",
+        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\calendar_date_picker_view_animator.xml"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
@@ -172,20 +172,20 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\time_zone_filter_item.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\time_zone_filter_item.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\keyboard_text_with_header.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout\\keyboard_text_with_header.xml"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\keyboard_text_with_header.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout\\keyboard_text_with_header.xml"
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\time_zone_filter_item.xml",
+        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\time_zone_filter_item.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\time_picker_dialog.xml",
@@ -240,12 +240,12 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\f66a79b52474322f9dba1a28979eb68a22434e20\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -304,12 +304,12 @@
         "source": "D:\\Android\\Projectes\\Tabata\\app\\src\\main\\res\\layout\\add_workout_fragment.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\radial_time_header_label.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\radial_time_header_label.xml"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\radial_time_header_label.xml",
+        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout\\radial_time_header_label.xml"
     },
     {
         "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout\\date_picker_view.xml",

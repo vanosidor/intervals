@@ -136,12 +136,12 @@
         "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\drawable\\recurrence_bubble_fill.xml"
     },
     {
-        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_btn_colored_material.xml"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
@@ -374,6 +374,10 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\fd256257bf91c22d9ece9ca006b0f97f334bd92e\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\touch_selector.xml",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable\\touch_selector.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",

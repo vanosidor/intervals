@@ -10,4 +10,7 @@
     <color name="secondary_text">#757575</color>
     <color name="divider">#BDBDBD</color>
 
+    <!-- the activated state color for a forecast list item -->
+    <color name="activated">#E0E0E0</color>
+
 </resources>

@@ -1,4 +1,4 @@
-#Tue Apr 18 17:22:35 GMT+03:00 2017
+#Tue May 16 09:54:29 GMT+03:00 2017
 base.0=D\:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_57d28123c1cf39aabe8b1103cb7855d9992b5bf6
 renamed.1=classes2.dex
 renamed.0=classes.dex
