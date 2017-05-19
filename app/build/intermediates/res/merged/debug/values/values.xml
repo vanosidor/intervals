@@ -1051,7 +1051,7 @@
     <string name="deleted_key">%1$s deleted</string>
     <string name="dialog_delete_cancel">Cancel</string>
     <string name="dialog_delete_message">Are you sure want to delete this workout?</string>
-    <string name="dialog_delete_ok">Ok</string>
+    <string name="dialog_delete_ok">OK</string>
     <string name="done_label">Done</string>
     <string name="endByDate">; until <ns1:g id="date">%s</ns1:g></string>
     <string name="every_weekday">"Every weekday (Mon\u2013Fri)"</string>

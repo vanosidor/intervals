@@ -833,14 +833,7 @@
                     "endOffset": 10104
                 },
                 "from": {
-                    "file": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\values\\bools.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 57,
-                        "endColumn": 53,
-                        "endOffset": 106
-                    }
+                    "file": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\values\\bools.xml"
                 }
             },
             {
@@ -5844,7 +5837,14 @@
                     "endOffset": 82536
                 },
                 "from": {
-                    "file": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1629,
+                        "endColumn": 47,
+                        "endOffset": 1672
+                    }
                 }
             },
             {
