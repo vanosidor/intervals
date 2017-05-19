@@ -45,9 +45,6 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
     public static final int INDEX_CURRENT_NUM_ROUNDS = 2;
     public static final int INDEX_CURRENT_DATE = 3;
 
-    public static final String BROADCAST_START_TIMER_IN_SERVICE = "start_timer_in_service";
-    public static final String BROADCAST_STOP_TIMER_IN_SERVICE = "stop_timer_in_service";
-
     private Uri mUri;
     private Uri mUriTemp;
 
@@ -67,28 +64,11 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
 
     long mDate;
 
-
-   /* public interface OnStartTimer {
-       void startingTimer(long date);
-    }*/
-
-   // OnStartTimer mOnStartTimer;
-
     @Override
     public void onCreate() {
         Log.d(TAG, "Service onCreate");
 
         isTimerRunning = false;
-
-        /*Observable<Long> startTimerObservable = createStartTimerObservable();
-
-        startTimerObservable.subscribe(new Consumer<Long>() {
-            @Override
-            public void accept(Long aLong) throws Exception {
-                Log.d(TAG, "accept: " + aLong);
-            }
-        });*/
-
 
     }
 
@@ -190,16 +170,10 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
 
         mTimerWrapper.startTimer();
 
-        //mOnStartTimer.startingTimer(mDate);
-
         isTimerRunning = true;
-
-       /* Intent intent = new Intent(BROADCAST_START_TIMER_IN_SERVICE);
-        intent.putExtra(id);
-        sendBroadcast(intent);*/
-
         cursor.close();
     }
+
 
     public long getCurrentWorkoutTimeInMillis() {
         return mWorkoutTimeInMillis;
@@ -248,33 +222,11 @@ public class TimerService extends Service implements TimerWrapper.TimerCallbacks
     /**
      * @return true if two Uri matches
      */
-
     public boolean isUriMatches() {
         boolean isUriMatches = false;
         if (mUriTemp != null && mUriTemp.equals(mUri)) isUriMatches = true;
         return isUriMatches;
     }
-
-    /*public Observable<Long> createStartTimerObservable() {
-        return Observable.create(new ObservableOnSubscribe<Long>() {
-            @Override
-            public void subscribe(final ObservableEmitter<Long> emitter) throws Exception {
-
-
-
-                emitter.onNext(mDate);
-
-                emitter.setCancellable(new Cancellable() {
-                    @Override
-                    public void cancel() throws Exception {
-                        mDate = 0;
-                    }
-                });
-
-
-            }
-        });
-    }*/
 
     public long getDate() {
         return mDate;

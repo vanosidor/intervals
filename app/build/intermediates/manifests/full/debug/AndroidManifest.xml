@@ -29,11 +29,15 @@
         </activity>
         <activity
             android:name="com.production.sidorov.ivan.tabata.WorkoutActivity"
+            android:label="Details"
             android:parentActivityName="com.production.sidorov.ivan.tabata.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+        <!-- The manifest entry for our SettingsActivity. Each Activity requires a manifest entry -->
+        <activity android:name="com.production.sidorov.ivan.tabata.preferences.SettingsActivity" />
 
         <provider
             android:name="com.production.sidorov.ivan.tabata.data.WorkoutProvider"

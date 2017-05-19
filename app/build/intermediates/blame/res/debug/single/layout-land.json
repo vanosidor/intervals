@@ -1,23 +1,11 @@
 [
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\number_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\number_picker_dialog.xml"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\workout_list_item_content.xml",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout-land\\workout_list_item_content.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\calendar_date_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\calendar_date_picker_dialog.xml"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\date_picker_dialog.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-land\\date_picker_dialog.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\radial_time_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\radial_time_picker_dialog.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\radial_time_picker_dialog.xml",
@@ -32,20 +20,8 @@
         "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-land\\hms_picker_dialog.xml"
     },
     {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\date_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\date_picker_dialog.xml"
-    },
-    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\calendar_date_picker_dialog.xml",
         "source": "C:\\Users\\Иван\\.android\\build-cache\\a6d074d2bec1d42848ffec771b9aa880e8fe6cd1\\output\\res\\layout-land\\calendar_date_picker_dialog.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\expiration_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\expiration_picker_dialog.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\hms_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\hms_picker_dialog.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\time_picker_dialog.xml",
@@ -58,10 +34,6 @@
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\activity_workout.xml",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\layout-land\\activity_workout.xml"
-    },
-    {
-        "merged": "D:\\Android\\Projectes\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\time_picker_dialog.xml",
-        "source": "C:\\Users\\пользователь\\.android\\build-cache\\36e73297ffe8564a45a847f153800cb76a9ddda6\\output\\res\\layout-land\\time_picker_dialog.xml"
     },
     {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\add_workout_fragment.xml",

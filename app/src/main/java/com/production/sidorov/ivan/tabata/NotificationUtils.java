@@ -71,19 +71,17 @@ public class NotificationUtils {
                 cancelWorkoutIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
-        NotificationCompat.Action cancelWorkoutAction = new NotificationCompat.Action(R.drawable.ic_close_black_24dp,
-                "Stop workout",
+       return  new NotificationCompat.Action(R.drawable.ic_close_black_24dp,
+                "Cancel Workout",
                 cancelWorkoutPendingIntent);
 
-        return cancelWorkoutAction;
     }
 
 
     private static Bitmap largeIcon(Context context) {
 
         Resources res = context.getResources();
-        Bitmap largeIcon = BitmapFactory.decodeResource(res, R.drawable.timer);
-        return largeIcon;
+        return  BitmapFactory.decodeResource(res, R.drawable.timer);
     }
 
 }

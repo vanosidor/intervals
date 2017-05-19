@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tabata</string>
+    <string name="app_name">Intervals</string>
     <string name="content_authority">com.production.sidorov.ivan.tabata</string>
 
     <string name="btn_ok">OK</string>
@@ -10,10 +10,11 @@
     <string name="workout_notification_body">Tap to return to workout</string>
 
     <!-- Strings for AddWorkoutDialog -->
-    <string name="workout_title">Workout name</string>
-    <string name="workout_time_title">Workout time</string>
-    <string name="rest_time_title">Rest time</string>
-    <string name="rounds_title">Rounds:</string>
+    <string name="workout_title">WORKOUT NAME</string>
+    <string name="workout_time_title">WORKOUT TIME</string>
+    <string name="rest_time_title">REST TIME</string>
+    <string name="rounds_title">ROUNDS:</string>
+    <string name="set_time_hint">TAP TO SET TIME</string>
 
     <!--Format time -->
     <string name="format_time_with_hours"> %1$02d:%2$02d:%3$02d </string>
@@ -34,7 +35,16 @@
     <string name="workout_list_title">Workout</string>
     <string name="rest_list_title">Rest</string>
     <string name="dialog_delete_message">Are you sure want to delete this workout?</string>
-    <string name="dialog_delete_ok">Ok</string>
+    <string name="dialog_delete_ok">OK</string>
     <string name="dialog_delete_cancel">Cancel</string>
+
+    <!-- Menu-->
+    <string name="action_settings">Settings</string>
+
+    <!--Preferences-->
+    <string name="pref_play_round_sound_key">round_sound</string>
+    <string name="pref_play_round_sound_value">Play Sounds</string>
+    <string name="pref_play_round_sound_true">On</string>
+    <string name="pref_play_round_sound_false">Off</string>
 
 </resources>

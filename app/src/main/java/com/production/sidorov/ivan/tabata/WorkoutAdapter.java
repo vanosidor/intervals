@@ -51,7 +51,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
 
     private WorkoutAdapterOnClickHandler mWorkoutAdapterClickedHandler;
 
-
     //On Create ViewHolder
     @Override
     public WorkoutAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -80,11 +79,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         holder.restTimeTextView.setText(restTime);
         holder.roundsTextView.setText(String.valueOf(numRounds));
        // holder.playImageView.setVisibility(View.VISIBLE);
-
-
-
     }
-
 
 
     //get Item count
@@ -107,8 +102,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             vh.playImageView.setVisibility(View.VISIBLE);
         }
     }
-
-
 
     //Workout ViewHolder implementation
     class WorkoutAdapterViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
@@ -162,12 +155,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             contentView.setOnClickListener(this);
             deleteImageView.setOnClickListener(this);
             editImageButton.setOnClickListener(this);
-
-
         }
-
-
-
 
         //On click handler
         @Override
@@ -231,7 +219,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         }
     }
 
-
     //get workout date from cursor
     private long getWorkoutDate(RecyclerView.ViewHolder viewHolder){
 
@@ -240,7 +227,6 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             return mCursor.getLong(WorkoutDBHelper.INDEX_WORKOUT_DATE);
         }
         else return 0L;
-
     }
 
     //Swap cursor
@@ -248,7 +234,5 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         mCursor = newCursor;
         notifyDataSetChanged();
     }
-
-
 
 }

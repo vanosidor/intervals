@@ -3,31 +3,30 @@ package com.production.sidorov.ivan.tabata.dialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.databinding.DataBindingComponent;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringDef;
-import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codetroopers.betterpickers.hmspicker.HmsPickerBuilder;
 import com.codetroopers.betterpickers.hmspicker.HmsPickerDialogFragment;
+import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.production.sidorov.ivan.tabata.R;
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 import com.production.sidorov.ivan.tabata.databinding.AddWorkoutFragmentBinding;
+
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+
 
 /**
  * Created by Иван on 21.03.2017.
@@ -41,18 +40,27 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
     private static final int INPUT_WORKOUT_TIME_REFERENCE = 0 ;
     private static final int INPUT_REST_TIME_REFERENCE = 1 ;
 
+    //Date value for edit workout(it's ID)
     long mDate;
+
+    //Edit mode or Create mode value
     private boolean isEdit;
+
+    //Subscriptions for InputWorkout and InputRest fields
+    Disposable setWorkoutTimeSubscription;
+    Disposable setRestTimeSubscription;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-
+        //Inflate xml layout
         mBinding = DataBindingUtil.inflate(inflater,R.layout.add_workout_fragment,container,false);
 
+        //Get root view
         View rootView = mBinding.getRoot();
 
+        //Get arguments
         Bundle arguments = getArguments();
 
         mBinding.okButton.setText(R.string.btn_ok);
@@ -105,6 +113,43 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
 
         mBinding.cancelButton.setOnClickListener(this);
         mBinding.inputWorkoutTimeTextView.setOnClickListener(this);
+
+        //set subscription for input workout time changes
+        setWorkoutTimeSubscription = RxTextView.textChanges(mBinding.inputWorkoutTimeTextView).subscribe(new Consumer<CharSequence>() {
+            @Override
+            public void accept(CharSequence charSequence) throws Exception {
+                if(charSequence.equals("00:00")) {
+                    mBinding.inputWorkoutTimeTextView.setTextColor(getResources().getColor(R.color.colorAccent));
+                    mBinding.workoutTimeHintLeft.setVisibility(View.VISIBLE);
+                    mBinding.workoutTimeHintLeft.setText(R.string.set_time_hint);
+                }
+                else {
+                    mBinding.inputWorkoutTimeTextView.setTextColor(getResources().getColor(R.color.primary_text));
+                    mBinding.workoutTimeHintLeft.setVisibility(View.GONE);
+                }
+                //Toast.makeText(getContext(), "ADSDSFD", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //set subscription for input rest time changes
+        setRestTimeSubscription = RxTextView.textChanges(mBinding.inputRestTimeTextView).subscribe(new Consumer<CharSequence>() {
+            @Override
+            public void accept(CharSequence charSequence) throws Exception {
+                if(charSequence.equals("00:00")) {
+                    mBinding.inputRestTimeTextView.setTextColor(getResources().getColor(R.color.colorAccent));
+                    mBinding.workoutTimeHintRight.setVisibility(View.VISIBLE);
+                    mBinding.workoutTimeHintRight.setText(R.string.set_time_hint);
+                }
+                else {
+                    mBinding.inputRestTimeTextView.setTextColor(getResources().getColor(R.color.primary_text));
+                    mBinding.workoutTimeHintRight.setVisibility(View.GONE);
+                }
+                //Toast.makeText(getContext(), "ADSDSFD", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
         mBinding.inputRestTimeTextView.setOnClickListener(this);
 
         //Set onSeekBarChangeListener
@@ -124,6 +169,14 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
         catch (ClassCastException ex){
             throw new ClassCastException(context.toString()+" must implement OnFragmentButtonClickListener");
         }
+    }
+
+    //Unsubscribe
+    @Override
+    public void onPause() {
+        super.onPause();
+        setWorkoutTimeSubscription.dispose();
+        setRestTimeSubscription.dispose();
     }
 
     //Dialog Set callback
@@ -169,8 +222,8 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
         void onButtonOkClicked();
     }
 
-    private OnFragmentButtonsClickListener mListener;
 
+    private OnFragmentButtonsClickListener mListener;
 
     //onClick views method callback
     @Override

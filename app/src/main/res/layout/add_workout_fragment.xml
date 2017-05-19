@@ -18,7 +18,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Workout Name" />
+            tools:text="WORKOUT NAME" />
 
         <TextView
             android:id="@+id/workoutTimeTitleTextView"
@@ -31,7 +31,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/workoutTitleEditText"
-            tools:text="Workout Time" />
+            tools:text="WORKOUT TIME" />
 
         <TextView
             android:id="@+id/restTimeTitleTextView"
@@ -44,36 +44,57 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/workoutTitleEditText"
-            tools:text="Rest Time" />
-
+            tools:text="REST TIME" />
 
         <TextView
             android:id="@+id/inputWorkoutTimeTextView"
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/workoutTimeTitleTextView"
-            tools:text="00:00" />
+            tools:text="00:00"/>
 
         <TextView
             android:id="@+id/inputRestTimeTextView"
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/restTimeTitleTextView"
             tools:text="00:00" />
+
+        <TextView
+            android:id="@+id/workoutTimeHintLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            tools:text="TAP TO SET TIME"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/inputWorkoutTimeTextView"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toRightOf="@+id/inputWorkoutTimeTextView"
+            app:layout_constraintLeft_toLeftOf="@+id/inputWorkoutTimeTextView"/>
+
+        <TextView
+            android:id="@+id/workoutTimeHintRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            tools:text="TAP TO SET TIME"
+            android:textSize="12sp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/inputRestTimeTextView"
+            app:layout_constraintLeft_toLeftOf="@+id/inputRestTimeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/inputRestTimeTextView" />
 
         <TextView
             android:id="@+id/roundsTitleTextView"
@@ -89,7 +110,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputWorkoutTimeTextView"
-            tools:text="Rounds:" />
+            tools:text="ROUNDS:" />
 
         <TextView
             android:id="@+id/numRoundsTextView"
@@ -131,12 +152,12 @@
             android:background="@drawable/button_custom_shape"
             android:textColor="@drawable/button_custom_text"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/guideline"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/roundsSeekBar"
             app:layout_constraintVertical_bias="0.108"
-            tools:text="Cancel"
-            app:layout_constraintHorizontal_bias="0.0" />
+            tools:text="Cancel" />
 
         <Button
             android:id="@+id/okButton"
@@ -151,12 +172,12 @@
             android:background="@drawable/button_custom_shape"
             android:textColor="@drawable/button_custom_text"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/roundsSeekBar"
             app:layout_constraintVertical_bias="0.108"
-            tools:text="Ok"
-            app:layout_constraintHorizontal_bias="1.0" />
+            tools:text="Ok" />
 
         <EditText
             android:id="@+id/workoutTitleEditText"

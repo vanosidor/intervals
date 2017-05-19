@@ -18,13 +18,15 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 import com.production.sidorov.ivan.tabata.databinding.ActivityWorkoutBinding;
+import com.production.sidorov.ivan.tabata.preferences.SettingsActivity;
 import com.production.sidorov.ivan.tabata.sync.TimerService;
 import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
 import com.production.sidorov.ivan.tabata.utilitis.WorkoutTimeUtils;
@@ -50,18 +52,6 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
     String mRestTime;
     private int mRounds;
 
-
-
-    //UI
-    //private TextView mWorkoutNameTextView;
-    //private TextView mTimeTextView;
-    //private TextView mWorkoutTypeTextView;
-    //private HoloCircularProgressBar mProgressBar;
-    //private TextView mRoundsTitleTextView;
-    //private TextView mCurrentRoundTextView;
-    //private Button mStartButton;
-   // private Button mStopButton;
-
     private ObjectAnimator mProgressBarAnimator;
 
     @Override
@@ -71,17 +61,6 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         Log.d(TAG, "OnCreate");
         setContentView(R.layout.activity_workout);
         mBinding= DataBindingUtil.setContentView(this,R.layout.activity_workout);
-
-        //mStartButton = (Button) findViewById(R.id.startButton);
-        //mStopButton = (Button) findViewById(R.id.stopButton);
-
-        //mProgressBar = (HoloCircularProgressBar) findViewById(R.id.holoCircularProgressBar);
-
-        //mWorkoutNameTextView = (TextView) findViewById(R.id.workoutNameTextView);
-        //mTimeTextView = (TextView) findViewById(R.id.timeTextView);
-        //mWorkoutTypeTextView = (TextView) findViewById(R.id.workoutTypeTextView);
-        //mRoundsTitleTextView = (TextView) findViewById(R.id.roundsTitleTextView);
-        //mCurrentRoundTextView = (TextView) findViewById(R.id.currentRoundTextView);
 
         mBinding.timeTextView.setText(R.string.time_default);
         mBinding.roundsTitleTextView.setText(R.string.round_title);
@@ -152,6 +131,28 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
         Log.d(TAG, "onResume");
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        /* Use AppCompatActivity's method getMenuInflater to get a handle on the menu inflater */
+        MenuInflater inflater = getMenuInflater();
+        /* Use the inflater's inflate method to inflate our menu layout to this menu */
+        inflater.inflate(R.menu.workout_menu, menu);
+        /* Return true so that the menu is displayed in the Toolbar */
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -354,9 +355,10 @@ public class WorkoutActivity extends AppCompatActivity implements LoaderManager.
             case TimerWrapper.BROADCAST_FINISH_ALL: {
                 Log.d(TAG, "workout finished work");
 
-                mBinding.startButton.setEnabled(true);
+                updateUIStopRun();
+                /*mBinding.startButton.setEnabled(true);
                 mBinding.stopButton.setEnabled(false);
-                mBinding.workoutTypeTextView.setText("");
+                mBinding.workoutTypeTextView.setText("");*/
                 break;
             }
         }

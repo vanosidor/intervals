@@ -21,16 +21,20 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.production.sidorov.ivan.tabata.data.WorkoutContract;
 import com.production.sidorov.ivan.tabata.data.WorkoutDBHelper;
 
 import com.production.sidorov.ivan.tabata.databinding.ActivityMainBinding;
 import com.production.sidorov.ivan.tabata.dialog.AddWorkoutDialog;
+import com.production.sidorov.ivan.tabata.preferences.SettingsActivity;
 import com.production.sidorov.ivan.tabata.sync.TimerService;
 import com.production.sidorov.ivan.tabata.sync.TimerWrapper;
+import com.tubb.smrv.SwipeHorizontalMenuLayout;
 
 public class MainActivity extends AppCompatActivity implements WorkoutAdapter.WorkoutAdapterOnClickHandler,
         LoaderManager.LoaderCallbacks<Cursor>,
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     long mWorkoutDateTag;
 
-    // visibility of workout dialog(need for re-orientation)
+    // visibility of workout_menu dialog(need for re-orientation)
     private static boolean sIsAddWorkoutVisible;
 
     @Override
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         Log.d(TAG, "Create");
         setContentView(R.layout.activity_main);
 
-        mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         mBinding.workoutRecyclerView.setHasFixedSize(true);
 
         mWorkoutAdapter = new WorkoutAdapter(this, this);
+
 
         mBinding.workoutRecyclerView.setAdapter(mWorkoutAdapter);
 
@@ -93,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         Log.d(TAG, "OnStart");
         super.onStart();
 
-        if(sIsAddWorkoutVisible){
+        if (sIsAddWorkoutVisible) {
             mBinding.addWorkoutFab.hide();
             mBinding.workoutRecyclerView.setVisibility(View.GONE);
         }
@@ -106,15 +111,21 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
     @Override
     protected void onResume() {
         super.onResume();
+        registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_STOP_TIMER));
         registerReceiver(broadcastReceiver, new IntentFilter(TimerWrapper.BROADCAST_FINISH_ALL));
+
     }
 
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             /*If uri clicked matches with current uri update UI */
-            Toast.makeText(context, "Finish workout", Toast.LENGTH_SHORT).show();
-            mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag).findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+            //hide green arrow when finished workout
+            SwipeHorizontalMenuLayout sml = (SwipeHorizontalMenuLayout) mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
+            if (sml != null) {
+                sml.findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+                sml.setSwipeEnable(true);
+            }
         }
     };
 
@@ -137,7 +148,31 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
         Log.d(TAG, "Unbind service");
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        /* Use AppCompatActivity's method getMenuInflater to get a handle on the menu inflater */
+        MenuInflater inflater = getMenuInflater();
+        /* Use the inflater's inflate method to inflate our menu layout to this menu */
+        inflater.inflate(R.menu.workout_menu, menu);
+        /* Return true so that the menu is displayed in the Toolbar */
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    //On service connected
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
@@ -151,17 +186,29 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
             if (null == mTimerService) return;
 
-            //remove previous visible arrow if exists
+            //remove previous visible arrow if exists and enable swipe
             if (mWorkoutDateTag != 0) {
-                View contentView = mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
-                if(contentView!=null) contentView.findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+
+                SwipeHorizontalMenuLayout swipeView = (SwipeHorizontalMenuLayout) mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
+
+                if (swipeView != null) {
+                    swipeView.findViewById(R.id.playImageView).setVisibility(View.INVISIBLE);
+                    swipeView.setSwipeEnable(true);
+                }
+
             }
             //show visible arrow
             if (mTimerService.isTimerRunning()) {
                 mWorkoutDateTag = mTimerService.getDate();
-                //set green arrow for current workout
-                View contentView = mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
-                if(contentView!=null)contentView.findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
+
+                //set green arrow for current workout and disable swipe
+                SwipeHorizontalMenuLayout swipeView = (SwipeHorizontalMenuLayout) mBinding.workoutRecyclerView.findViewWithTag(mWorkoutDateTag);
+
+                if (swipeView != null) {
+                    swipeView.findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
+                    swipeView.setSwipeEnable(false);
+                }
+
             }
         }
 

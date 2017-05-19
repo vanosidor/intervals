@@ -19,9 +19,9 @@ public class FakeDataUtils {
     private static int [] workoutIDs = {200,300,500,711,900,962};
 
     /**
-     * Creates a single ContentValues object with random workout data for the provided date
+     * Creates a single ContentValues object with random workout_menu data for the provided date
      * @param date a normalized date
-     * @return ContentValues object filled with random workout data
+     * @return ContentValues object filled with random workout_menu data
      */
     private static ContentValues createTestWeatherContentValues(long date) {
         ContentValues testWorkoutValues = new ContentValues();
