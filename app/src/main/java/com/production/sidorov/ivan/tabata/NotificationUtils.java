@@ -72,7 +72,7 @@ public class NotificationUtils {
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
        return  new NotificationCompat.Action(R.drawable.ic_close_black_24dp,
-                "Cancel Workout",
+                context.getString(R.string.cancel_workout_message),
                 cancelWorkoutPendingIntent);
 
     }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Интервалы</string>
+    <string name="detail_activity">Тренировка</string>
+    <string name="action_settings">Настройки</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="sets_title">повторы</string>
+    <string name="timer_cancel">Сбросить</string>
+    <string name="timer_start">Старт</string>
+    <string name="workout_list_title">Работа</string>
+    <string name="dialog_delete_message">Вы точно хотите удалить эту тренировку?</string>
+    <string name="dialog_delete_cancel">Отмена</string>
+    <string name="workout_notification_body">Нажмите, чтобы вернуться</string>
+    <string name="workout_notification_title">Тренировка активна</string>
+    <string name="workout_title">НАЗВАНИЕ ТРЕНИРОВКИ</string>
+    <string name="workout_time_title">РАБОТА</string>
+    <string name="rest_time_title">ОТДЫХ</string>
+    <string name="rounds_title">Раунды:</string>
+    <string name="set_time_hint">УСТАНОВИТЕ ВРЕМЯ</string>
+    <string name="pref_play_round_sound_value">Звуки</string>
+    <string name="pref_play_round_sound_true">Включены</string>
+    <string name="pref_play_round_sound_false">Отключены</string>
+    <string name="rest_list_title">Отдых</string>
+    <string name="rest_text">Отдых</string>
+    <string name="round_title">Раунд</string>
+    <string name="workout_text">Работа</string>
+    <string name="cancel_workout_message">Отменить тренировку</string>
+    <string name="add_dialog_ok">Сохранить</string>
+    <string name="add_dialog_cancel">Отмена</string>
+    <string name="toast_enter_data">Пожалуйста, введите данные тренировки!</string>
+
+
+    <plurals name="plurals_rounds">
+        <item quantity="one">%1$d раунд</item>
+        <item quantity="few">%1$d раунда</item>
+        <item quantity="many">%1$d раундов</item>
+        <item quantity="other">%1$d раундов</item>
+    </plurals>
+</resources>

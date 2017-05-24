@@ -58,7 +58,7 @@ ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:19:17-77
 activity#com.production.sidorov.ivan.tabata.WorkoutActivity
 ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:label
-		ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:25:13-36
+		ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:25:13-52
 	android:parentActivityName
 		ADDED from D:\Android\Projects\Tabata\app\src\main\AndroidManifest.xml:26:13-55
 	android:name

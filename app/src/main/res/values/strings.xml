@@ -1,50 +1,64 @@
 <resources>
     <string name="app_name">Intervals</string>
-    <string name="content_authority">com.production.sidorov.ivan.tabata</string>
+    <string name="detail_activity">Workout</string>
+    <string name="content_authority" translatable="false">com.production.sidorov.ivan.tabata</string>
 
-    <string name="btn_ok">OK</string>
+    <string name="btn_ok" translatable="false">OK</string>
     <string name="btn_cancel">Cancel</string>
 
     <!-- Strings for Notifications-->
     <string name="workout_notification_title">Your workout is active</string>
     <string name="workout_notification_body">Tap to return to workout</string>
+    <string name="cancel_workout_message">Cancel Workout</string>
 
     <!-- Strings for AddWorkoutDialog -->
     <string name="workout_title">WORKOUT NAME</string>
     <string name="workout_time_title">WORKOUT TIME</string>
     <string name="rest_time_title">REST TIME</string>
-    <string name="rounds_title">ROUNDS:</string>
+    <string name="rounds_title">Rounds:</string>
     <string name="set_time_hint">TAP TO SET TIME</string>
+    <string name="add_dialog_ok">SAVE</string>
+    <string name="add_dialog_cancel">Cancel</string>
+    <string name="toast_enter_data">Please, enter workout data!</string>
 
     <!--Format time -->
-    <string name="format_time_with_hours"> %1$02d:%2$02d:%3$02d </string>
-    <string name="format_time"> %1$02d:%2$02d </string>
-    <string name="time_default">00:00</string>
+    <string name="format_time_with_hours" translatable="false"> %1$02d:%2$02d:%3$02d </string>
+    <string name="format_time" translatable="false"> %1$02d:%2$02d </string>
+    <string name="time_default" translatable="false">00:00</string>
 
     <!-- Workout activity -->
     <string name="round_title">Round</string>
     <string name="timer_start">Start</string>
     <string name="timer_cancel">Cancel</string>
-    <string name="format_rounds">1/%1$1d</string>
-    <string name="format_rounds_started">%1$d/%2$1d</string>
+    <string name="format_rounds" translatable="false">1/%1$1d</string>
+    <string name="format_rounds_started" translatable="false">%1$d/%2$1d</string>
     <string name="rest_text">Rest</string>
     <string name="workout_text">Workout</string>
 
     <!-- Workout list Item -->
-    <string name="sets_title">sets</string>
     <string name="workout_list_title">Workout</string>
     <string name="rest_list_title">Rest</string>
     <string name="dialog_delete_message">Are you sure want to delete this workout?</string>
-    <string name="dialog_delete_ok">OK</string>
+    <string name="dialog_delete_ok" translatable="false">OK</string>
     <string name="dialog_delete_cancel">Cancel</string>
 
     <!-- Menu-->
     <string name="action_settings">Settings</string>
 
     <!--Preferences-->
-    <string name="pref_play_round_sound_key">round_sound</string>
+    <string name="pref_play_round_sound_key" translatable="false">round_sound</string>
     <string name="pref_play_round_sound_value">Play Sounds</string>
     <string name="pref_play_round_sound_true">On</string>
     <string name="pref_play_round_sound_false">Off</string>
+
+    <!--Plurals for rounds-->
+    <plurals name="plurals_rounds">
+        <item quantity="zero">no sets</item>
+        <item quantity="one">%1$d set</item>
+        <item quantity="two">%1$d sets</item>
+        <item quantity="few">%1$d sets</item>
+        <item quantity="many">%1$d sets</item>
+        <item quantity="other">%1$d sets</item>
+    </plurals>
 
 </resources>

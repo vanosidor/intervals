@@ -8,32 +8,38 @@
         <item quantity="one">; один раз</item>
         <item quantity="other">; для <ns1:g id="number">%d</ns1:g> раз</item>
     </plurals>
+    <plurals name="plurals_rounds">
+        <item quantity="one">%1$d раунд</item>
+        <item quantity="few">%1$d раунда</item>
+        <item quantity="many">%1$d раундов</item>
+        <item quantity="other">%1$d раундов</item>
+    </plurals>
     <plurals name="recurrence_end_count">
         <item quantity="one">Для <ns1:g id="event_count">%d</ns1:g> события</item>
         <item quantity="other">Для <ns1:g id="event_count">%d</ns1:g> событий</item>
     </plurals>
     <plurals name="recurrence_interval_daily">
-        <!-- Singular form [CHAR LIMIT=30] -->
+        
         <item quantity="one">Каждый <ns1:g id="count">%d</ns1:g> день</item>
-        <!-- Plural form [CHAR LIMIT=30] -->
+        
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> дн.</item>
     </plurals>
     <plurals name="recurrence_interval_monthly">
-        <!-- Singular form [CHAR LIMIT=30] -->
+        
         <item quantity="one">Каждый <ns1:g id="count">%d</ns1:g> месяц</item>
-        <!-- Plural form [CHAR LIMIT=30] -->
+        
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> мес.</item>
     </plurals>
     <plurals name="recurrence_interval_weekly">
-        <!-- Singular form [CHAR LIMIT=30] -->
+        
         <item quantity="one">Каждую <ns1:g id="count">%d</ns1:g> неделю</item>
-        <!-- Plural form [CHAR LIMIT=30] -->
+        
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> нед.</item>
     </plurals>
     <plurals name="recurrence_interval_yearly">
-        <!-- Singular form [CHAR LIMIT=30] -->
+        
         <item quantity="one">Каждый <ns1:g id="count">%d</ns1:g> год</item>
-        <!-- Plural form [CHAR LIMIT=30] -->
+        
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> лет</item>
     </plurals>
     <plurals name="weekly">
@@ -60,9 +66,18 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Открыть доступ пользователю %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Свернуть"</string>
     <string name="acessibility_recurrence_choose_end_date_description">изменить конечную дату</string>
+    <string name="action_settings">Настройки</string>
+    <string name="add_dialog_cancel">Отмена</string>
+    <string name="add_dialog_ok">Сохранить</string>
+    <string name="app_name">Интервалы</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="cancel_workout_message">Отменить тренировку</string>
     <string name="day_c">ДЕНЬ</string>
     <string name="day_picker_description">Сетка дней месяца</string>
     <string name="deleted_key">%1$s удален</string>
+    <string name="detail_activity">Тренировка</string>
+    <string name="dialog_delete_cancel">Отмена</string>
+    <string name="dialog_delete_message">Вы точно хотите удалить эту тренировку?</string>
     <string name="done_label">Готово</string>
     <string name="endByDate">; до <ns1:g id="date">%s</ns1:g></string>
     <string name="every_weekday">"Каждый будний день (Пон\u2013Пят)"</string>
@@ -91,11 +106,19 @@
     <string name="palestine_display_name">Палестина</string>
     <string name="picker_cancel">Отмена</string>
     <string name="picker_set">ОК</string>
+    <string name="pref_play_round_sound_false">Отключены</string>
+    <string name="pref_play_round_sound_true">Включены</string>
+    <string name="pref_play_round_sound_value">Звуки</string>
     <string name="recurrence_end_continously">Навсегда</string>
     <string name="recurrence_end_count_label">Для ряда событий</string>
     <string name="recurrence_end_date">До <ns1:g id="date">%s</ns1:g></string>
     <string name="recurrence_end_date_label">До даты</string>
     <string name="recurrence_month_pattern_by_day">тот же день каждый месяц</string>
+    <string name="rest_list_title">Отдых</string>
+    <string name="rest_text">Отдых</string>
+    <string name="rest_time_title">ОТДЫХ</string>
+    <string name="round_title">Раунд</string>
+    <string name="rounds_title">Раунды:</string>
     <string name="save_label">Готово</string>
     <string msgid="146198913615257606" name="search_menu_title">"Поиск"</string>
     <string name="searchview_description_clear">Очистить запрос</string>
@@ -105,6 +128,8 @@
     <string name="select_hours">Выберите час</string>
     <string name="select_minutes">Выберите минуты</string>
     <string name="select_year">Выберите год</string>
+    <string name="set_time_hint">УСТАНОВИТЕ ВРЕМЯ</string>
+    <string name="sets_title">повторы</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
     <string name="switch_off">Выкл.</string>
     <string name="switch_on">Вкл.</string>
@@ -112,7 +137,16 @@
     <string name="time_picker_30_label">:30</string>
     <string name="time_picker_ampm_label">--</string>
     <string name="time_picker_time_seperator">:</string>
+    <string name="timer_cancel">Сбросить</string>
     <string name="timer_delete">Удалить</string>
+    <string name="timer_start">Старт</string>
+    <string name="toast_enter_data">Пожалуйста, введите данные тренировки!</string>
+    <string name="workout_list_title">Работа</string>
+    <string name="workout_notification_body">Нажмите, чтобы вернуться</string>
+    <string name="workout_notification_title">Тренировка активна</string>
+    <string name="workout_text">Работа</string>
+    <string name="workout_time_title">РАБОТА</string>
+    <string name="workout_title">НАЗВАНИЕ ТРЕНИРОВКИ</string>
     <string name="year_c">ГОД</string>
     <string name="year_picker_description">Список годов</string>
     <string name="yearly_plain">Ежегодно</string>

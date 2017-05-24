@@ -77,7 +77,8 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         holder.workoutNameTextView.setText(name);
         holder.workoutTimeTextView.setText(workoutTime);
         holder.restTimeTextView.setText(restTime);
-        holder.roundsTextView.setText(String.valueOf(numRounds));
+
+        holder.setsTitleTextView.setText(mContext.getResources().getQuantityString(R.plurals.plurals_rounds,numRounds,numRounds));
        // holder.playImageView.setVisibility(View.VISIBLE);
     }
 
@@ -109,7 +110,7 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         final TextView workoutNameTextView;
         final TextView workoutTimeTextView;
         final TextView restTimeTextView;
-        final TextView roundsTextView;
+       // final TextView roundsTextView;
 
         final TextView setsTitleTextView;
         final TextView workoutTitleTextView;
@@ -131,16 +132,14 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
             workoutNameTextView = (TextView) view.findViewById(R.id.workoutNameTextView);
             workoutTimeTextView = (TextView) view.findViewById(R.id.workoutTimeTextView);
             restTimeTextView = (TextView) view.findViewById(R.id.restTimeTextView);
-            roundsTextView = (TextView) view.findViewById(R.id.roundsTimeTextView);
 
             setsTitleTextView = (TextView)view.findViewById(R.id.setsTitleTextView);
+
             workoutTitleTextView= (TextView)view.findViewById(R.id.workoutListTitleTextView);
             restTitleTextView = (TextView)view.findViewById(R.id.restListTitleTextView);
 
             playImageView = (ImageView)view.findViewById(R.id.playImageView);
 
-
-            setsTitleTextView.setText(R.string.sets_title);
             workoutTitleTextView.setText(R.string.workout_list_title);
             restTitleTextView.setText(R.string.rest_list_title);
 

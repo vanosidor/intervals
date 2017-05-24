@@ -89,28 +89,17 @@
         app:layout_constraintTop_toBottomOf="@+id/setsTitleTextView"
         tools:text="Rest" />
 
-
-    <TextView
-        android:id="@+id/roundsTimeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="0dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workoutNameTextView"
-        tools:text="12" />
-
     <TextView
         android:id="@+id/setsTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
         android:layout_marginTop="0dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintLeft_toRightOf="@+id/roundsTimeTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/workoutNameTextView"
-        tools:text="sets" />
+        tools:text="12 sets" />
 
     <View
         android:id="@+id/separator_vertical"

@@ -63,8 +63,8 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
         //Get arguments
         Bundle arguments = getArguments();
 
-        mBinding.okButton.setText(R.string.btn_ok);
-        mBinding.cancelButton.setText(R.string.btn_cancel);
+        mBinding.okButton.setText(R.string.add_dialog_ok);
+        mBinding.cancelButton.setText(R.string.add_dialog_cancel);
 
         //Set text for static views
         if(arguments!=null)
@@ -247,7 +247,7 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
                 if(mBinding.workoutTitleEditText.getText().toString().trim().length() == 0
                         || mBinding.inputWorkoutTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))
                         || mBinding.inputRestTimeTextView.getText().toString().equals(getResources().getString(R.string.time_default))) {
-                    Toast.makeText(getActivity(),"Please, enter workout data!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),getResources().getString(R.string.toast_enter_data),Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -278,7 +278,6 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
 
                 //if create new workout
                 else{
-
                     date = System.currentTimeMillis();
                     contentValues.put(WorkoutContract.WorkoutEntry.COLUMN_DATE,date);
                     getContext().getContentResolver().insert(WorkoutContract.WorkoutEntry.CONTENT_URI,contentValues);
