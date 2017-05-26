@@ -79,8 +79,25 @@ class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutAdapterV
         holder.restTimeTextView.setText(restTime);
 
         holder.setsTitleTextView.setText(mContext.getResources().getQuantityString(R.plurals.plurals_rounds,numRounds,numRounds));
-       // holder.playImageView.setVisibility(View.VISIBLE);
+
+        //fix bug when green arrow changes position if recycler view refreshing
+        if(mContext instanceof MainActivity)
+        {
+            long activeWorkoutDate = ((MainActivity) mContext).getWorkoutDateTag();
+            if(workoutDate == activeWorkoutDate) {
+                holder.swipeHorizontalMenuLayout.setSwipeEnable(false);
+                holder.playImageView.setVisibility(View.VISIBLE);
+            }
+            else {
+                holder.swipeHorizontalMenuLayout.setSwipeEnable(true);
+                holder.playImageView.setVisibility(View.INVISIBLE);
+            }
+        }
+
+        Log.d(TAG, "Position: "+position+" Name: "+name+" Visibility: " + holder.playImageView.getVisibility());
     }
+
+
 
 
     //get Item count

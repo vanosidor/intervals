@@ -54,7 +54,11 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
 
     LinearLayoutManager mLayoutManager;
 
-    long mWorkoutDateTag;
+    private long mWorkoutDateTag;
+
+    public long getWorkoutDateTag() {
+        return mWorkoutDateTag;
+    }
 
     // visibility of workout_menu dialog(need for re-orientation)
     private static boolean sIsAddWorkoutVisible;
@@ -197,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
                 }
 
             }
+
             //show visible arrow
             if (mTimerService.isTimerRunning()) {
                 mWorkoutDateTag = mTimerService.getDate();
@@ -207,6 +212,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutAdapter.Wo
                 if (swipeView != null) {
                     swipeView.findViewById(R.id.playImageView).setVisibility(View.VISIBLE);
                     swipeView.setSwipeEnable(false);
+
                 }
 
             }

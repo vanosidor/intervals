@@ -87,7 +87,7 @@ public class TimerWrapper implements SharedPreferences.OnSharedPreferenceChangeL
             @Override
             public void onTick(long millisRemain) {
 
-                Log.d(TAG, "onTick: "+ millisRemain/1000);
+               // Log.d(TAG, "onTick: "+ millisRemain/1000);
 
                 Intent intent = new Intent(BROADCAST_WORKOUT_TICK);
 
@@ -119,7 +119,7 @@ public class TimerWrapper implements SharedPreferences.OnSharedPreferenceChangeL
             @Override
             public void onTick(long millisRemain) {
 
-                Log.d(TAG, "onTick: "+ millisRemain/1000);
+               // Log.d(TAG, "onTick: "+ millisRemain/1000);
                 Intent intent = new Intent(BROADCAST_REST_TICK);
                 intent.putExtra(INTENT_REST_EXTRA, millisRemain);
                 mContext.sendBroadcast(intent);

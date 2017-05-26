@@ -19,27 +19,27 @@
         <item quantity="other">Для <ns1:g id="event_count">%d</ns1:g> событий</item>
     </plurals>
     <plurals name="recurrence_interval_daily">
-        
+        <!-- Singular form [CHAR LIMIT=30] -->
         <item quantity="one">Каждый <ns1:g id="count">%d</ns1:g> день</item>
-        
+        <!-- Plural form [CHAR LIMIT=30] -->
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> дн.</item>
     </plurals>
     <plurals name="recurrence_interval_monthly">
-        
+        <!-- Singular form [CHAR LIMIT=30] -->
         <item quantity="one">Каждый <ns1:g id="count">%d</ns1:g> месяц</item>
-        
+        <!-- Plural form [CHAR LIMIT=30] -->
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> мес.</item>
     </plurals>
     <plurals name="recurrence_interval_weekly">
-        
+        <!-- Singular form [CHAR LIMIT=30] -->
         <item quantity="one">Каждую <ns1:g id="count">%d</ns1:g> неделю</item>
-        
+        <!-- Plural form [CHAR LIMIT=30] -->
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> нед.</item>
     </plurals>
     <plurals name="recurrence_interval_yearly">
-        
+        <!-- Singular form [CHAR LIMIT=30] -->
         <item quantity="one">Каждый <ns1:g id="count">%d</ns1:g> год</item>
-        
+        <!-- Plural form [CHAR LIMIT=30] -->
         <item quantity="other">Каждые <ns1:g id="count">%d</ns1:g> лет</item>
     </plurals>
     <plurals name="weekly">

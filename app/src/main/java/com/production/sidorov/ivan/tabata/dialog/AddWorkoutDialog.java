@@ -90,6 +90,10 @@ public class AddWorkoutDialog extends Fragment implements View.OnClickListener, 
                 mBinding.inputRestTimeTextView.setText(restTime);
                 mBinding.workoutTitleEditText.setText(name);
                 mBinding.numRoundsTextView.setText(String.valueOf(rounds));
+                mBinding.roundsSeekBar.setProgress(rounds);
+
+                //close cursor
+                c.close();
             }
 
         }
