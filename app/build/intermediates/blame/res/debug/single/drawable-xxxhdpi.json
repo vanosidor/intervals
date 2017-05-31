@@ -16,6 +16,10 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_close_black_24dp.png"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\splash.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\splash.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_add_white_24dp.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_add_white_24dp.png"
     },

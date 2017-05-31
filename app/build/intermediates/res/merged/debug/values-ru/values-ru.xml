@@ -69,7 +69,7 @@
     <string name="action_settings">Настройки</string>
     <string name="add_dialog_cancel">Отмена</string>
     <string name="add_dialog_ok">Сохранить</string>
-    <string name="app_name">Интервалы</string>
+    <string name="app_name">Интервальный таймер</string>
     <string name="btn_cancel">Отмена</string>
     <string name="cancel_workout_message">Отменить тренировку</string>
     <string name="day_c">ДЕНЬ</string>
@@ -129,7 +129,6 @@
     <string name="select_minutes">Выберите минуты</string>
     <string name="select_year">Выберите год</string>
     <string name="set_time_hint">УСТАНОВИТЕ ВРЕМЯ</string>
-    <string name="sets_title">повторы</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
     <string name="switch_off">Выкл.</string>
     <string name="switch_on">Вкл.</string>

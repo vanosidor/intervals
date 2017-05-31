@@ -20,6 +20,10 @@
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_timer_black_24dp.png"
     },
     {
+        "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\splash.png",
+        "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\splash.png"
+    },
+    {
         "merged": "D:\\Android\\Projects\\Tabata\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_play_green.png",
         "source": "D:\\Android\\Projects\\Tabata\\app\\src\\main\\res\\drawable-hdpi\\ic_play_green.png"
     },

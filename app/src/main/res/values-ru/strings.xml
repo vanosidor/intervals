@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Интервалы</string>
+    <string name="app_name">Интервальный таймер</string>
     <string name="detail_activity">Тренировка</string>
     <string name="action_settings">Настройки</string>
     <string name="btn_cancel">Отмена</string>
-    <string name="sets_title">повторы</string>
     <string name="timer_cancel">Сбросить</string>
     <string name="timer_start">Старт</string>
     <string name="workout_list_title">Работа</string>
